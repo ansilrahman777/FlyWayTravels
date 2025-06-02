@@ -1,40 +1,41 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { NavLink } from 'react-router-dom'
-import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
-  ]
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   const socialLinks = [
-    { name: 'Instagram', url: '#', icon: <FaInstagram className="h-5 w-5" /> },
-    { name: 'Facebook', url: '#', icon: <FaFacebookF className="h-5 w-5" /> },
-    { name: 'WhatsApp', url: '#', icon: <FaWhatsapp className="h-5 w-5" /> }
-  ]
+    { name: "Instagram", url: "#", icon: <FaInstagram className="h-5 w-5" /> },
+    { name: "Facebook", url: "#", icon: <FaFacebookF className="h-5 w-5" /> },
+    { name: "WhatsApp", url: "#", icon: <FaWhatsapp className="h-5 w-5" /> },
+  ];
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 bg-white/90 shadow-lg backdrop-blur-sm' : 'py-4 bg-transparent'
-        }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "py-2 shadow-lg backdrop-blur-md" : "py-4 bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-4">
         {/* Desktop Header */}
@@ -46,7 +47,8 @@ const Header = () => {
                 key={index}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative text-base font-medium transition-colors ${isActive ? 'text-sky-600' : 'text-white hover:text-sky-500'
+                  `relative text-base font-medium transition-colors ${
+                    isActive ? "text-sky-600" : "text-white hover:text-sky-500"
                   }`
                 }
               >
@@ -58,7 +60,11 @@ const Header = () => {
                         layoutId="underline"
                         className="absolute left-0 right-0 h-0.5 bg-sky-500 bottom-[-4px]"
                         initial={false}
-                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 25,
+                        }}
                       />
                     )}
                   </>
@@ -103,7 +109,6 @@ const Header = () => {
             className="flex items-center"
           >
             <img src="/logo_name.png" alt="FlyWay" className="w-52" />
-
           </motion.div>
 
           {/* Right: Toggle Button */}
@@ -115,12 +120,34 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </motion.button>
@@ -132,7 +159,7 @@ const Header = () => {
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white shadow-lg"
@@ -145,7 +172,10 @@ const Header = () => {
                     key={index}
                     to={link.path}
                     className={({ isActive }) =>
-                      `text-lg font-medium transition-colors py-2 ${isActive ? 'text-sky-600' : 'text-gray-700 hover:text-sky-500'
+                      `text-lg font-medium transition-colors py-2 ${
+                        isActive
+                          ? "text-sky-600"
+                          : "text-gray-700 hover:text-sky-500"
                       }`
                     }
                     onClick={() => setMobileMenuOpen(false)}
@@ -186,7 +216,7 @@ const Header = () => {
         )}
       </AnimatePresence>
     </motion.header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

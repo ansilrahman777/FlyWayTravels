@@ -5,6 +5,7 @@ import DestinationCard from "../components/DestinationCard";
 import InteractiveGlobe from "../components/InteractiveGlobe";
 import { World } from "../components/ui/Globe";
 import { HeroScroll } from "../components/ui/HeroScroll";
+import { SmoothScrollHero } from "../components/ui/SmoothScrollHero";
 
 import bgImage from "../assets/images/hero2.jpg";
 
@@ -140,6 +141,10 @@ const Home = ({ openBookingModal }) => {
         <HeroScroll />
       </section>
 
+      <section>
+        <SmoothScrollHero />
+      </section>
+
       <section
         className="relative bg-fixed bg-center bg-cover overflow-hidden"
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -173,6 +178,8 @@ const Home = ({ openBookingModal }) => {
           </div>
         </div>
       </section>
+
+      
 
       <section className="py-16 sm:py-20 bg-gradient-to-r from-sky-500 to-indigo-600">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

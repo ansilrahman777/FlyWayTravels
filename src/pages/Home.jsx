@@ -1,13 +1,14 @@
 // src/pages/Home.jsx
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import DestinationCard from "../components/DestinationCard";
 import InteractiveGlobe from "../components/InteractiveGlobe";
 import { World } from "../components/ui/Globe";
-import { HeroScroll } from "../components/ui/HeroScroll";
-import { SmoothScrollHero } from "../components/ui/SmoothScrollHero";
+import { Hero1 } from "../components/hero/Hero1";
+import { Hero2 } from "../components/hero/Hero2";
 
 import bgImage from "../assets/images/hero2.jpg";
+import CollapseCardFeatures from "../components/ui/CollapseCardFeatures";
+import Hero3 from "../components/hero/Hero3";
 
 const Home = ({ openBookingModal }) => {
   const globeData = [
@@ -138,21 +139,26 @@ const Home = ({ openBookingModal }) => {
       transition={{ duration: 0.5 }}
     >
       <section>
-        <HeroScroll />
+        <Hero1 />
       </section>
 
       <section>
-        <SmoothScrollHero />
+        <Hero2 />
+      </section>
+      <section>
+        <Hero3 />
       </section>
 
-      <section
+
+
+      {/* <section
         className="relative bg-fixed bg-center bg-cover overflow-hidden"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="relative z-10 bg-black bg-opacity-20 text-white py-16">
           <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-8 gap-12">
             <div className="flex flex-col w-full lg:w-1/2 justify-center items-start text-left">
-              <h1 className="text-3xl md:text-5xl font-extrabold text-yellow-300 text-shadow-lg tracking-wide mb-4">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-white text-shadow-lg tracking-wide mb-4">
                 Fly way Travel
               </h1>
               <h2 className="text-2xl text-shadow-lg md:text-4xl leading-tight md:leading-snug mb-4">
@@ -177,6 +183,10 @@ const Home = ({ openBookingModal }) => {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section>
+        <CollapseCardFeatures />
       </section>
 
       

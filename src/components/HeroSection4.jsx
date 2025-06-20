@@ -1,65 +1,68 @@
-import { motion } from "framer-motion";
 
-import dubai from '../assets/badges/1.png';
-import bag_passport from '../assets/badges/2.png';
-import camera from '../assets/badges/3.png';
-import stamp_pass from '../assets/badges/4.png';
-import tourBadge from '../assets/badges/5.png';
-import flight from '../assets/badges/6.png';
-import place from '../assets/badges/8.png';
-import cityCard from '../assets/badges/9.png';
-import seal from '../assets/badges/10.png';
-import stampballon from '../assets/badges/11.png';
-import parisseal from '../assets/badges/12.png';
-import visastamp from '../assets/badges/13.png';
-import travelstamp from '../assets/badges/14.png';
-import travelstamp2 from '../assets/badges/15.png';
-import travelstamp3 from '../assets/badges/16.png';
-import hat from '../assets/badges/17.png';
-import globe from '../assets/badges/18.png';
+import traveller1 from "../assets/images/traveller1.png";
 
 const HeroSection4 = () => {
     return (
-        <section className="relative overflow-hidden min-h-[800px] py-24 flex justify-center items-center">
-            <img src={dubai} className="absolute top-8 left-8 w-[80px] sm:w-[130px]" alt="dubai" />
-            <img src={visastamp} className="absolute top-[90px] left-[130px] w-[50px] sm:w-[90px]" alt="visa stamp" />
-            <img src={travelstamp} className="absolute top-3 left-[180px] w-[120px] sm:w-[150px]" alt="travel stamp" />
-            <img src={globe} className="absolute top-6 left-[30%] w-[200px] sm:w-[390px]" alt="globe" />
-            <img src={parisseal} className="absolute top-2 right-[200px] w-[250px]" alt="paris seal" />
-            <img src={stampballon} className="absolute top-[30px] right-8 w-[150px]" alt="stampballon" />
-            <img src={seal} className="absolute top-[80px] right-[130px] w-[100px]" alt="seal" />
-            <img src={travelstamp2} className="absolute top-[160px] left-[10px] w-[120px]" alt="travelstamp2" />
-            <img src={camera} className="absolute top-[210px] left-[150px] w-[100px]" alt="camera" />
-            <img src={flight} className="absolute top-[190px] right-[200px] w-[250px]" alt="flight" />
-            <img src={tourBadge} className="absolute top-[320px] right-[70px] w-[150px]" alt="tourBadge" />
-            <img src={bag_passport} className="absolute bottom-[140px] left-[120px] w-[260px]" alt="bag_passport" />
-            <img src={cityCard} className="absolute bottom-[100px] left-[30px] w-[120px]" alt="city card" />
-            <img src={travelstamp3} className="absolute bottom-[110px] left-[45%] w-[120px]" alt="travelstamp3" />
-            <img src={place} className="absolute bottom-[80px] right-[35%] w-[200px]" alt="place" />
-            <img src={hat} className="absolute bottom-[100px] left-[38%] w-[120px]" alt="hat" />
-            <img src={stamp_pass} className="absolute bottom-[60px] right-[60px] w-[200px] rounded-full" alt="stamp_pass" />
 
-            {/* Main Content */}
-            <div className="relative z-10 text-center px-4">
-                <div class="font font-Poppins">
-                    <div class="flex flex-col items-center relative">
-                        <h1 class="absolute text-6xl md:text-9xl font-semibold text-white opacity-10  ">
-                            FLY WAY 
-                        </h1>
-                        <div class="relative flex flex-col items-center mt-5 md:mt-10">
-                            <h1 class="text-2xl md:text-4xl lg:text-6xl font-semibold text-gray-100">FLY WAY TRAVEL</h1>
-                            <div class="md:w-28 w-14 md:h-[4px] h-[2px] bg-orange-600 mt-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-                    We have made the ultimate theme for travel agencies. Craft a remarkable website and grow your travel business!
-                </p>
-                <button className="bg-cyan-500 hover:bg-cyan-600 text-white text-lg font-bold px-8 py-3 rounded-full transition duration-300">
-                    Contact US
-                </button>
+        <div className="px-4 py-12 md:px-8 lg:px-16">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+
+            {/* Text Section */}
+            <div className="flex-1 space-y-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                READY FOR TAKEOFF! <br />
+                THE <span className="text-white">WORLD</span> IS <br />
+                CALLING YOUR NAME
+              </h1>
+              <p className="text-white text-justify">
+                Grab your passport and leave the rest to us. From tourist visas to flight tickets, hotel stays to smooth airport transfers—Flyway Travel has every part of your journey covered.
+              </p>
+
+              <div className="flex flex-wrap gap-4 text-white font-medium">
+                {[
+                  ["fas fa-passport", "Tourist Visa"],
+                  ["fas fa-plane", "Flight Booking"],
+                  ["fas fa-hotel", "Hotel Stay"],
+                  ["fas fa-car", "Airport Transfer"],
+                ].map(([icon, label]) => (
+                  <button key={label} className="flex items-center space-x-2">
+                    <i className={`${icon} text-white`}></i>
+                    <span>{label}</span>
+                  </button>
+                ))}
+              </div>
             </div>
-        </section>
+
+            <div className="relative flex-1 hidden md:flex items-center justify-center">
+              <div className="absolute w-72 h-72 md:w-96 md:h-96 bg-blue-500 rounded-full z-0"></div>
+              <img
+                src={traveller1}
+                alt="Traveler"
+                className="relative z-10 w-60 md:w-80 object-contain"
+              />
+              {[
+                ["fas fa-hotel", "Hotel Booking", "top-6 left-16 md:top-14 md:left-24"],
+                ["fas fa-plane-departure", "Flight Tickets", "top-2 right-14 md:top-1 md:right-20"],
+                ["fas fa-car", "Airport Transfer", "bottom-14 left-2 md:bottom-14 md:left-16"],
+                ["fas fa-user-tie", "Tour Guide", "bottom-16 right-8 md:bottom-20 md:right-16"],
+              ].map(([icon, text, pos], idx) => (
+                <div
+                  key={idx}
+                  className={`absolute ${pos} bg-white shadow rounded-full flex items-center px-3 py-1 space-x-2 z-20`}
+                >
+                  <i className={`${icon} text-orange-500`}></i>
+                  <span className="text-xs md:text-sm font-medium">{text}</span>
+                </div>
+              ))}
+
+              <div className="absolute bottom-2 bg-orange-500 text-white rounded-full flex items-center px-4 py-2 space-x-2 text-xs md:text-sm shadow-lg z-20">
+                <i className="fas fa-headset"></i>
+                <span>+12 345 6789 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
     )
 }

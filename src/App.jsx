@@ -21,7 +21,7 @@ function App() {
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50">
+      <div className="flex flex-col min-h-screen">
         <Header openBookingModal={openBookingModal} />
         <main className="flex-grow">
           <AnimatePresence mode="wait">

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../assets/vedios/vedio2.mp4"; // Adjust the path as needed
-
+import vedioFile from "../assets/vedios/vedio2.mp4";
 import hero_fw_1 from "../assets/images/fw123.jpg";
+
 const HeroSection1 = () => {
   return (
     <div className="relative text-white overflow-hidden">
@@ -15,21 +14,23 @@ const HeroSection1 = () => {
         loop
         playsInline
       />
-      <div className="sticky top-0 flex h-screen flex-col justify-between overflow-hidden">
-        <div className="flex items-center justify-center px-4 mt-52">
-          <img
-            src={hero_fw_1}
-            alt="Placeholder image"
-            className="mr-2 h-full w-20  object-cover"
-          />
-          <h1 className="text-2xl font-bold text-white text-shadow-lg sm:text-5xl md:text-7xl">
-            See the world. <br />
-            Create memories. <br />
-            Travel with{" "}
-            <span className="inline-block -skew-x-[18deg] font-black text-blue-700">
-              FLYWAY.
-            </span>
-          </h1>
+      <div className="relative z-10 flex h-screen flex-col justify-between">
+        <div className="flex flex-1 items-center justify-center px-4">
+          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left max-w-5xl">
+            <img
+              src={hero_fw_1}
+              alt="Placeholder image"
+              className="mb-4 sm:mb-0 sm:mr-6 w-20 object-cover"
+            />
+            <h1 className="text-2xl font-bold text-white text-shadow-lg sm:text-5xl md:text-7xl">
+              See the world. <br />
+              Create memories. <br />
+              Travel with{" "}
+              <span className="inline-block -skew-x-[18deg] font-black text-blue-700">
+                FLYWAY.
+              </span>
+            </h1>
+          </div>
         </div>
 
         <motion.div
@@ -37,13 +38,7 @@ const HeroSection1 = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <span
-            style={{
-              writingMode: "vertical-lr",
-            }}
-          >
-            SCROLL
-          </span>
+          <span style={{ writingMode: "vertical-lr" }}>SCROLL</span>
           <FiArrowDown className="mx-auto" />
         </motion.div>
         <motion.div
@@ -51,18 +46,12 @@ const HeroSection1 = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <span
-            style={{
-              writingMode: "vertical-lr",
-            }}
-          >
-            SCROLL
-          </span>
+          <span style={{ writingMode: "vertical-lr" }}>SCROLL</span>
           <FiArrowDown className="mx-auto" />
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection1
+export default HeroSection1;

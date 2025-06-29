@@ -17,8 +17,8 @@ const ROTATE_DEG = 0;
 const STAGGER = 0;
 const CENTER_STAGGER = 0;
 const SECTION_HEIGHT = 500;
-const CARD_GAP_FACTOR = 1.2;      // Lower = more spacing
-const CARD_ACTIVE_SCALE = 1.1;    // 1.1 = 10% bigger when active
+const CARD_GAP_FACTOR = 0.9;      // Lower = more spacing
+const CARD_ACTIVE_SCALE = 1;    // 1.1 = 10% bigger when active
 
 // === Main Component ===
 export const StaggerTestimonials = () => {

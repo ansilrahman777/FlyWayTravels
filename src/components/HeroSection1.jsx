@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../assets/vedios/vedio2.mp4";
+import vedioFile from "../assets/videos/video2.mp4";
 import hero_fw_1 from "../assets/images/fw123.jpg";
+import BlurText from "./BlurText";
 
 const HeroSection1 = () => {
   return (
@@ -15,24 +16,30 @@ const HeroSection1 = () => {
         playsInline
       />
       <div className="relative z-10 flex h-screen flex-col justify-between">
-        <div className="flex flex-1 items-center justify-center px-4">
-          <div className="flex flex-col sm:flex-row items-center text-center sm:text-left max-w-5xl">
-            <img
-              src={hero_fw_1}
-              alt="Placeholder image"
-              className="mb-4 sm:mb-0 sm:mr-6 w-20 object-cover"
-            />
-            <h1 className="text-2xl font-bold text-white text-shadow-lg sm:text-5xl md:text-7xl">
+        <div className="flex items-center justify-center min-h-screen px-4">
+          <div className="flex items-stretch justify-center gap-4">
+            <div className="flex items-center justify-center w-20 sm:w-24 md:w-28">
+              <img
+                src={hero_fw_1}
+                alt="Placeholder image"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <h1 className="text-3xl font-rubikvinyl text-blue-500 leading-tight sm:text-5xl md:text-7xl">
               See the world. <br />
               Create memories. <br />
               Travel with{" "}
-              <span className="inline-block -skew-x-[18deg] font-black text-blue-700">
-                FLYWAY.
+              <span className="inline-block font-black text-neutral-950">
+                <BlurText
+                  text="FLYWAY"
+                  delay={1000}
+                  animateBy="words"
+                  direction="top"
+                />
               </span>
             </h1>
           </div>
         </div>
-
         <motion.div
           className="absolute left-4 top-1/2 hidden -translate-y-1/2 text-xs lg:block"
           animate={{ y: [0, 10, 0] }}

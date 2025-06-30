@@ -14,7 +14,8 @@ import {
   FaGlobe,
   FaUserCheck,
   FaHeadset,
-  FaStar
+  FaStar,
+  FaShuttleVan
 } from 'react-icons/fa';
 import { cn } from '../lib/utils';
 
@@ -55,6 +56,15 @@ const WhyChooseUs = () => {
       features: ["Experienced guides", "Hidden gems", "Personalized trips", "24/7 support"],
       color: "rose",
       background: "bg-[url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]"
+    },
+    {
+      icon: <FaShuttleVan className="text-3xl" />,
+      title: "Smooth Airport Transfers",
+      subtitle: "No more waiting or overpaying",
+      description: "Our reliable airport transfer service ensures you're picked up and dropped off on time, every time—comfortably and stress-free.",
+      features: ["Timely pickups", "Comfortable rides", "Fixed prices", "24/7 availability"],
+      color: "violet",
+      background: "bg-[url('https://images.unsplash.com/photo-1500835556837-99ac94a05952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]"
     }
   ];
 
@@ -126,7 +136,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         {/* Features grid with flip cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center">
           {features.map((feature, index) => (
             <FeatureFlipCard 
               key={index}
@@ -207,6 +217,24 @@ const WhyChooseUs = () => {
           </div>
         </motion.div>
       </div>
+      
+      {/* Custom scrollbar styles */}
+      <style jsx>{`
+        .feature-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-thumb {
+          background: #c5c5c5;
+          border-radius: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #a8a8a8;
+        }
+      `}</style>
     </section>
   );
 };
@@ -244,6 +272,11 @@ const FeatureFlipCard = ({
       gradient: "from-rose-500/20 to-rose-500/10",
       text: "text-rose-600",
       icon: "text-rose-500"
+    },
+    violet: { 
+      gradient: "from-violet-500/20 to-violet-500/10",
+      text: "text-violet-600",
+      icon: "text-violet-500"
     }
   };
 
@@ -251,7 +284,7 @@ const FeatureFlipCard = ({
 
   return (
     <div
-      className="relative w-full aspect-[2/3] group [perspective:2000px]"
+      className="relative w-full aspect-[3/4] group [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -299,12 +332,12 @@ const FeatureFlipCard = ({
           </div>
         </div>
 
-        {/* Back of card - no background image */}
+        {/* Back of card - adjusted layout */}
         <div
           className={cn(
             "absolute inset-0 w-full h-full",
             "[backface-visibility:hidden] [transform:rotateY(180deg)]",
-            "p-6 rounded-2xl",
+            "p-4 rounded-2xl",
             "bg-gradient-to-b from-slate-50 to-white",
             "border border-slate-200",
             "shadow-lg",
@@ -314,43 +347,44 @@ const FeatureFlipCard = ({
             !isFlipped ? "opacity-0" : "opacity-100"
           )}
         >
-          <div className="flex-1 space-y-4">
-            <div className="flex justify-center mb-4">
-              
-            </div>
+          <div className="flex-1 overflow-hidden flex flex-col">
             
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold text-slate-900 text-center">
+            
+            <div className="mb-3">
+              <h3 className="text-base font-bold text-slate-900 text-center leading-tight">
                 {title}
               </h3>
-              <p className="text-slate-600 text-sm text-center">
+              <p className="text-xs text-slate-600 text-center mt-1">
                 {description}
               </p>
             </div>
 
-            <div className="space-y-3 mt-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-2 text-sm text-slate-700 transition-all duration-500"
-                  style={{
-                    transform: isFlipped
-                      ? "translateX(0)"
-                      : "translateX(-10px)",
-                    opacity: isFlipped ? 1 : 0,
-                    transitionDelay: `${index * 100 + 200}ms`,
-                  }}
-                >
-                  <div className={`w-5 h-5 rounded-full ${colors.icon} flex items-center justify-center mt-0.5`}>
-                    <div className="w-1.5 h-1.5 rounded-full bg-current"></div>
+            {/* Feature list with scroll */}
+            <div className="flex-1 min-h-0 overflow-y-auto feature-scrollbar pr-1">
+              <div className="space-y-2">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-slate-700 transition-all duration-500"
+                    style={{
+                      transform: isFlipped
+                        ? "translateX(0)"
+                        : "translateX(-10px)",
+                      opacity: isFlipped ? 1 : 0,
+                      transitionDelay: `${index * 100 + 200}ms`,
+                    }}
+                  >
+                    <div className={`min-w-[16px] h-4 rounded-full ${colors.icon} flex items-center justify-center mt-0.5`}>
+                      <div className="w-1.5 h-1.5 rounded-full bg-current"></div>
+                    </div>
+                    <span className="leading-tight">{feature}</span>
                   </div>
-                  <span>{feature}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="pt-4 mt-auto">
+          <div className="pt-2 mt-auto">
             <div
               className={cn(
                 "group/start relative",
@@ -362,7 +396,7 @@ const FeatureFlipCard = ({
                 "hover:scale-[1.02] hover:cursor-pointer"
               )}
             >
-              <span className={`text-sm font-medium ${colors.text} transition-colors duration-300 group-hover/start:text-blue-600`}>
+              <span className={`text-xs font-medium ${colors.text} transition-colors duration-300 group-hover/start:text-blue-600`}>
                 Learn more
               </span>
               <div className="relative group/icon">
@@ -373,7 +407,7 @@ const FeatureFlipCard = ({
                     "opacity-0 group-hover/start:opacity-100 scale-90 group-hover/start:scale-100"
                   )}
                 />
-                <svg xmlns="http://www.w3.org/2000/svg" className={`relative z-10 w-4 h-4 ${colors.icon} transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110`} viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className={`relative z-10 w-3.5 h-3.5 ${colors.icon} transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110`} viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>

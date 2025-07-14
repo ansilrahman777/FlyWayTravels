@@ -45,14 +45,14 @@ const Home = ({ openBookingModal }) => {
           color: "#fff",
         }}      >
         <HeroSection01 />
+
         <HeroSection02 />
+
         <HeroSection03 />
+
         <MorphingText texts={texts} />
+
         <HeroSection04 />
-
-        
-
-
 
         <HeroSection05 />
 
@@ -63,6 +63,7 @@ const Home = ({ openBookingModal }) => {
         <HeroSection08 />
 
         <HeroSection09 />
+
         <div style={{ overflow: "hidden" }}>
           <svg
             preserveAspectRatio="none"
@@ -81,11 +82,8 @@ const Home = ({ openBookingModal }) => {
             <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
           </svg>
         </div>
+        
       </section>
-
-
-
-
     </>
   );
 };

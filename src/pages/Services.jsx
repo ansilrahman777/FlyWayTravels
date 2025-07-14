@@ -1,50 +1,7 @@
-// src/pages/Services.jsx
 import { motion } from 'framer-motion';
-import ServiceCard from '../components/ServiceCard';
+import ServiceSection from '../components/ServiceSection';
 
 const Services = ({ openBookingModal }) => {
-  const services = [
-    {
-      title: "Airline Tickets",
-      description: "Best deals on domestic and international flights with flexible booking options.",
-      icon: "✈️"
-    },
-    {
-      title: "Hotel Booking",
-      description: "Luxury to budget accommodations with exclusive member benefits and discounts.",
-      icon: "🏨"
-    },
-    {
-      title: "Holiday Packages",
-      description: "All-inclusive vacation packages tailored to your preferences and budget.",
-      icon: "🌴"
-    },
-    {
-      title: "Airport Transfer",
-      description: "Seamless transportation to and from airports worldwide.",
-      icon: "🚖"
-    },
-    {
-      title: "Tourist Visas",
-      description: "Expert assistance with visa applications and documentation.",
-      icon: "📝"
-    },
-    {
-      title: "Travel Insurance",
-      description: "Comprehensive coverage for all your travel needs and emergencies.",
-      icon: "🛡️"
-    },
-    {
-      title: "Worldwide Visa Service",
-      description: "Global visa solutions for both leisure and business travelers.",
-      icon: "🌎"
-    },
-    {
-      title: "Cruise Packages",
-      description: "Luxury cruise experiences to the world's most beautiful destinations.",
-      icon: "🛳️"
-    }
-  ];
 
   return (
     <motion.div
@@ -82,16 +39,7 @@ const Services = ({ openBookingModal }) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {services.map((service, index) => (
-            <ServiceCard 
-              key={index} 
-              service={service} 
-              index={index} 
-              openBookingModal={openBookingModal}
-            />
-          ))}
-        </div>
+        <ServiceSection />
 
         {/* Process Section */}
         <div className="bg-gradient-to-r from-sky-50 to-indigo-50 rounded-3xl p-12 mb-20">

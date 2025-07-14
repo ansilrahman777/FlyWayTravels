@@ -7,13 +7,13 @@ import {
   useTransform,
 } from "framer-motion";
 
-import fwm1 from "../assets/images/fwm1.jpg";
-import fwm2 from "../assets/images/fwm2.jpg";
-import fwm3 from "../assets/images/fwm3.jpg";
-import fwm4 from "../assets/images/fwm4.jpg";
-import fwm5 from "../assets/images/fwm5.jpg";
+import fwm1 from "../../assets/images/fwm1.jpg";
+import fwm2 from "../../assets/images/fwm2.jpg";
+import fwm3 from "../../assets/images/fwm3.jpg";
+import fwm4 from "../../assets/images/fwm4.jpg";
+import fwm5 from "../../assets/images/fwm5.jpg";
 
-const HeroSection2 = () => {
+const HeroSection02 = () => {
   return (
     <div className="bg-zinc-950">
       <ReactLenis
@@ -144,4 +144,4 @@ const ParallaxImg = ({ className, alt, src, start, end }) => {
   );
 };
 
-export default HeroSection2;
+export default HeroSection02;

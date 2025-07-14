@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
 import useMeasure from "react-use-measure";
-import foot1 from "../assets/images/foot3.jpg";
+import foot1 from "../../assets/images/foot1.jpg";
 
-const HeroSection6 = () => {
+const HeroSection09 = () => {
   return (
     <div
       className="px-4 py-12 relative bg-center bg-cover overflow-hidden "
@@ -131,4 +131,4 @@ const Question = ({ title, children, defaultOpen = false }) => {
   );
 };
 
-export default HeroSection6;
+export default HeroSection09;

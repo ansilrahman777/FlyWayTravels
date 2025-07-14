@@ -1,44 +1,51 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { FaPlaneUp } from "react-icons/fa6";
 
 const slides = [
   {
-    title: 'Disney land \nParis',
-    image: 'https://i.ibb.co/TvD7fnk/disney-slide.jpg',
+    title: "Disney land \nParis",
+    image: "https://i.ibb.co/TvD7fnk/disney-slide.jpg",
   },
   {
-    title: 'Caribbean\nCruise',
-    image: 'https://picsum.photos/id/1018/700/350',
+    title: "Caribbean\nCruise",
+    image: "https://picsum.photos/id/1018/700/350",
   },
   {
-    title: 'Firework\nFestival',
-    image: 'https://picsum.photos/id/1015/700/350',
+    title: "Firework\nFestival",
+    image: "https://picsum.photos/id/1015/700/350",
   },
-]
+];
 
-const CarouselComponent = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
-  const [selectedIndex, setSelectedIndex] = useState(0)
+const HeroSection04 = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi])
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi])
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
 
   const onSelect = useCallback(() => {
-    if (!emblaApi) return
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-  }, [emblaApi])
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return
-    emblaApi.on('select', onSelect)
-    onSelect()
-  }, [emblaApi, onSelect])
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect();
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="w-full max-w-7xl mx-auto rounded-lg relative overflow-visible">
       <p className="text-white text-lg italic text-center max-w-3xl mx-auto mb-10 leading-relaxed">
-        Let us transport you to the fairytale worlds of your favourite Disney stories
+        Let us transport you to the fairytale worlds of your favourite Disney
+        stories
         <br />
         and immerse yourself in the magic of Disneyland.
       </p>
@@ -49,8 +56,9 @@ const CarouselComponent = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`relative flex-[0_0_80%] md:flex-[0_0_70%] mr-10 md:mr-20 transition-opacity duration-500 ${selectedIndex === index ? 'opacity-100' : 'opacity-30'
-                  } overflow-visible`}
+                className={`relative flex-[0_0_80%] md:flex-[0_0_70%] mr-10 md:mr-20 transition-opacity duration-500 ${
+                  selectedIndex === index ? "opacity-100" : "opacity-30"
+                } overflow-visible`}
               >
                 <div className="relative w-4/5 h-[250px] rounded-xl overflow-hidden shadow-2xl">
                   <img
@@ -86,7 +94,7 @@ const CarouselComponent = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CarouselComponent
+export default HeroSection04;

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../assets/videos/video2.mp4";
-import hero_fw_1 from "../assets/images/fw123.jpg";
-import BlurText from "./BlurText";
+import vedioFile from "../../assets/videos/video2.mp4";
+import hero_fw_1 from "../../assets/images/fw123.jpg";
+import BlurText from "../BlurText";
 
-const HeroSection1 = () => {
+const HeroSection01 = () => {
   return (
     <div className="relative text-white overflow-hidden">
       <video
@@ -61,4 +61,4 @@ const HeroSection1 = () => {
   );
 };
 
-export default HeroSection1;
+export default HeroSection01;

@@ -162,14 +162,14 @@ const HeroSection03 = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg font-bold shadow-lg hover:shadow-xl transition-all"
+              className="px-8 py-3 font-emilys bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg font-bold shadow-lg hover:shadow-xl transition-all"
             >
               Plan Your Journey
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-white/90 text-blue-800 rounded-lg font-bold border border-blue-200 shadow hover:shadow-md transition-all dark:bg-blue-900/30 dark:text-white dark:border-blue-700"
+              className="px-8 py-3 font-emilys bg-white/90 text-blue-800 rounded-lg font-bold border border-blue-200 shadow hover:shadow-md transition-all dark:bg-blue-900/30 dark:text-white dark:border-blue-700"
             >
               View Services
             </motion.button>

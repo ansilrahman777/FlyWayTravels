@@ -50,7 +50,7 @@ const Home = ({ openBookingModal }) => {
 
         <HeroSection03 />
 
-        <MorphingText texts={texts} />
+        {/* <MorphingText texts={texts} /> */}
 
         <HeroSection04 />
 

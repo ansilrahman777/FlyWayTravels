@@ -42,8 +42,8 @@ const HeroSection04 = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto rounded-lg relative overflow-visible">
-      <p className="text-white text-lg italic text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+    <div className="w-full py-8 md:py-14 lg:py-28 mx-auto rounded-lg relative overflow-visible">
+      <p className="text-white font-emilys text-xl italic text-center max-w-3xl mx-auto mb-20 leading-relaxed">
         Let us transport you to the fairytale worlds of your favourite Disney
         stories
         <br />

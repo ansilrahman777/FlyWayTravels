@@ -103,39 +103,21 @@ const HeroSection08 = () => {
     },
   ];
 
-  const travelOptions = [
-    { icon: <FaPlane className="text-2xl" />, name: "Flights" },
-    { icon: <FaHotel className="text-2xl" />, name: "Hotels" },
-    { icon: <FaCar className="text-2xl" />, name: "Car Rentals" },
-    { icon: <FaUserFriends className="text-2xl" />, name: "Experiences" },
-  ];
-
   return (
-    <section className="py-16 px-4 relative overflow-hidden">
+    <section className="w-full px-4 md:px-8 lg:px-12 py-8 md:py-14 lg:py-28 relative overflow-hidden">
       <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-blue-500/10 blur-3xl"></div>
       <div className="absolute bottom-10 -left-20 w-64 h-64 rounded-full bg-emerald-500/10 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block mb-4"
-          >
-            <div className="bg-gradient-to-r from-blue-500 to-emerald-500 text-white py-2 px-6 rounded-full text-sm font-medium inline-flex items-center">
-              <FaRocket className="mr-2" /> TRAVEL WITH CONFIDENCE
-            </div>
-          </motion.div>
-
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl font-emilys md:text-4xl font-bold text-white mb-4"
           >
             Why Travelers Choose{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-emerald-700">
               Flyway
             </span>
           </motion.h2>
@@ -144,38 +126,16 @@ const HeroSection08 = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg font-emilys text-white max-w-3xl mx-auto"
           >
             Premium travel services that take the stress out of planning, so you
             can focus on the experience
           </motion.p>
         </div>
 
-        {/* Travel options animation */}
-        <motion.div
-          className="flex justify-center mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-        >
-          <div className="bg-white rounded-full shadow-lg p-2 flex flex-wrap justify-center gap-2">
-            {travelOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.4 + index * 0.1, type: "spring" }}
-                className="flex items-center bg-gradient-to-br from-blue-50 to-emerald-50 rounded-full px-4 py-2 text-gray-700 font-medium hover:bg-gradient-to-r hover:from-blue-500 hover:to-emerald-500 hover:text-white cursor-pointer transition-all duration-300"
-              >
-                {option.icon}
-                <span className="ml-2">{option.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Features grid with flip cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 py-10 justify-center">
           {features.map((feature, index) => (
             <FeatureFlipCard
               key={index}
@@ -227,34 +187,6 @@ const HeroSection08 = () => {
                 delay={0.4}
               />
             </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <h3 className="text-xl font-bold text-gray-900 mb-4">
-            Ready for your next adventure?
-          </h3>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg font-bold shadow-lg hover:shadow-xl transition-all"
-            >
-              Plan Your Trip
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-white text-gray-900 rounded-lg font-bold border border-gray-200 shadow hover:shadow-md transition-all"
-            >
-              Get a Free Quote
-            </motion.button>
           </div>
         </motion.div>
       </div>
@@ -370,10 +302,10 @@ const FeatureFlipCard = ({
 
             {/* Title and subtitle at bottom */}
             <div className="mt-auto text-center">
-              <h3 className="text-xl font-bold text-white leading-tight">
+              <h3 className="text-xl font-bold font-emilys text-white leading-tight">
                 {title}
               </h3>
-              <p className="text-white/90 mt-2 text-sm">{subtitle}</p>
+              <p className="text-white/90 mt-2 text-sm font-emilys">{subtitle}</p>
             </div>
           </div>
         </div>
@@ -395,10 +327,10 @@ const FeatureFlipCard = ({
         >
           <div className="flex-1 overflow-hidden flex flex-col">
             <div className="mb-3">
-              <h3 className="text-base font-bold text-slate-900 text-center leading-tight">
+              <h3 className="text-base font-emilys font-bold text-slate-900 text-center leading-tight">
                 {title}
               </h3>
-              <p className="text-xs text-slate-600 text-center mt-1">
+              <p className="text-xs font-emilys text-slate-600 text-center mt-1">
                 {description}
               </p>
             </div>
@@ -423,7 +355,7 @@ const FeatureFlipCard = ({
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-current"></div>
                     </div>
-                    <span className="leading-tight">{feature}</span>
+                    <span className="leading-tight font-emilys">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -489,8 +421,8 @@ const StatCard = ({ icon, number, label, delay = 0 }) => {
       <div className="mb-4 p-3 rounded-full bg-white/20 backdrop-blur-sm">
         {icon}
       </div>
-      <div className="text-3xl font-bold mb-2">{number}</div>
-      <div className="text-sm opacity-90 text-center">{label}</div>
+      <div className="text-3xl font-bold mb-2 font-emilys">{number}</div>
+      <div className="text-sm opacity-90 text-center font-emilys">{label}</div>
     </motion.div>
   );
 };

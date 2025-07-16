@@ -10,10 +10,6 @@ import HeroSection08 from "../components/hero/HeroSection08";
 import HeroSection09 from "../components/hero/HeroSection09";
 
 
-import HeroSection5 from "../components/HeroSection5";
-
-import heroimg4 from "../assets/images/hero4.jpg";
-
 const texts = [
   "Hello",
   "Morphing",

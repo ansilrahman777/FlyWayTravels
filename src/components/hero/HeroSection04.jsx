@@ -3,18 +3,20 @@ import useEmblaCarousel from "embla-carousel-react";
 import { FaPlaneUp } from "react-icons/fa6";
 
 const slides = [
+
   {
-    title: "Disney land \nParis",
-    image: "https://i.ibb.co/TvD7fnk/disney-slide.jpg",
+    title: "Tokyo\nAdventure",
+    image: "https://picsum.photos/id/1043/700/350",
   },
   {
-    title: "Caribbean\nCruise",
-    image: "https://picsum.photos/id/1018/700/350",
+    title: "New York\nCity Tour",
+    image: "https://picsum.photos/id/1011/700/350",
   },
   {
-    title: "Firework\nFestival",
-    image: "https://picsum.photos/id/1015/700/350",
-  },
+    title: "Santorini\nGreece",
+    image: "https://picsum.photos/id/1016/700/350",
+  }
+
 ];
 
 const HeroSection04 = () => {

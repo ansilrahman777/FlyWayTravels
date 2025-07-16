@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion';
-import ServiceSection from '../components/ServiceSection';
+import { motion } from "framer-motion";
+import ServiceSection from "../components/ServiceSection";
 import image1 from "../assets/images/fw6.jpg";
 
 const Services = ({ openBookingModal }) => {
-
   return (
-    <section
+    <main
       style={{
         backgroundImage:
           "linear-gradient(135deg, #da082d 3%, #5d1dab 37%, #67d71a 69%, #b1c709 95%)",
@@ -28,12 +27,13 @@ const Services = ({ openBookingModal }) => {
                 Your Journey, Our Services
               </h1>
               <p class="mt-6 text-lg font-bold text-black sm:text-xl">
-                Flyway Travel delivers complete solutions — from expert visa assistance to best flight deals, hotel bookings, and 24/7 support.
-
+                Flyway Travel delivers complete solutions — from expert visa
+                assistance to best flight deals, hotel bookings, and 24/7
+                support.
               </p>
               <p class="mt-4 text-base text-black font-bold max-w-xl">
-                Explore our range of travel services designed to make every part of your trip simple, safe, and special.
-
+                Explore our range of travel services designed to make every part
+                of your trip simple, safe, and special.
               </p>
             </div>
 
@@ -90,9 +90,10 @@ const Services = ({ openBookingModal }) => {
             Our Services
           </h2>
           <p className="mt-1 font-emilys text-lg text-black">
-            At Flyway Travel, we take the hassle out of planning and bring the joy back to travel.
-            Whether you're jetting off for adventure, business, family time, or spiritual
-            journeys — we handle the details so you don't have to.
+            At Flyway Travel, we take the hassle out of planning and bring the
+            joy back to travel. Whether you're jetting off for adventure,
+            business, family time, or spiritual journeys — we handle the details
+            so you don't have to.
           </p>
         </div>
         <ServiceSection />
@@ -105,9 +106,9 @@ const Services = ({ openBookingModal }) => {
               Our Approach
             </h2>
             <p className="mt-1 font-emilys text-lg text-black">
-              Every journey matters. Our approach combines deep expertise, local connections,
-              and personalized support — ensuring you travel smoothly, safely, and stress-free
-              from start to finish.
+              Every journey matters. Our approach combines deep expertise, local
+              connections, and personalized support — ensuring you travel
+              smoothly, safely, and stress-free from start to finish.
             </p>
           </div>
 
@@ -138,8 +139,11 @@ const Services = ({ openBookingModal }) => {
                   </div>
                   <div className="grow pt-0.5 pb-8">
                     <p className="text-base font-emilys lg:text-base text-black">
-                      <span className="text-black">Personalized Consultation:</span>
-                      We listen to your travel needs and craft a plan that suits your destination, budget, and timeline.
+                      <span className="text-black">
+                        Personalized Consultation:
+                      </span>
+                      We listen to your travel needs and craft a plan that suits
+                      your destination, budget, and timeline.
                     </p>
                   </div>
                 </div>
@@ -155,7 +159,8 @@ const Services = ({ openBookingModal }) => {
                   <div className="grow pt-0.5 pb-8">
                     <p className="text-base font-emilys lg:text-base text-black">
                       <span className="text-black">Visa & Documents:</span>
-                      We handle all paperwork, visa applications, and travel documents so you don’t have to stress.
+                      We handle all paperwork, visa applications, and travel
+                      documents so you don’t have to stress.
                     </p>
                   </div>
                 </div>
@@ -171,7 +176,8 @@ const Services = ({ openBookingModal }) => {
                   <div className="grow pt-0.5 pb-8">
                     <p className="text-base font-emilys lg:text-base text-black">
                       <span className="text-black">Flights & Stays:</span>
-                      Get the best flight deals, secure hotel bookings, and tailored recommendations for your comfort.
+                      Get the best flight deals, secure hotel bookings, and
+                      tailored recommendations for your comfort.
                     </p>
                   </div>
                 </div>
@@ -187,7 +193,8 @@ const Services = ({ openBookingModal }) => {
                   <div className="grow pt-0.5 pb-8">
                     <p className="text-base font-emilys lg:text-base text-black">
                       <span className="text-black">Travel Support:</span>
-                      Relax while we manage transfers, itinerary updates, and 24/7 support during your trip.
+                      Relax while we manage transfers, itinerary updates, and
+                      24/7 support during your trip.
                     </p>
                   </div>
                 </div>
@@ -205,21 +212,47 @@ const Services = ({ openBookingModal }) => {
           </div>
         </div>
 
-      <div className="bg-gradient-to-r from-sky-700 to-sky-300 rounded-3xl max-w-7xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">Need Help Choosing?</h2>
-        <p className="text-sky-100 mb-8 max-w-2xl mx-auto">
-          Our travel consultants are ready to help you select the perfect services for your next adventure.
-        </p>
-        <button
-          onClick={() => openBookingModal()}
-          className="bg-white text-sky-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-        >
-          Contact Our Experts
-        </button>
-      </div>
+        <div className="bg-gradient-to-r from-sky-700 to-sky-300 rounded-3xl max-w-7xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Need Help Choosing?
+          </h2>
+          <p className="text-sky-100 mb-8 max-w-2xl mx-auto">
+            Our travel consultants are ready to help you select the perfect
+            services for your next adventure.
+          </p>
+          <button
+            onClick={() => openBookingModal()}
+            className="bg-white text-sky-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            Contact Our Experts
+          </button>
+        </div>
       </section>
 
-    </section>
+      <div style={{ overflow: "hidden" }}>
+        <svg
+          preserveAspectRatio="none"
+          viewBox="0 0 1200 120"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{
+            fill: "#77ffc2",
+            width: "100%",
+            height: 165,
+            transform: "rotate(180deg)",
+          }}
+        >
+          <path
+            d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+            opacity=".25"
+          />
+          <path
+            d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+            opacity=".5"
+          />
+          <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+        </svg>
+      </div>
+    </main>
   );
 };
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../../assets/videos/video2.mp4";
+import vedioFile from "../../assets/videos/fly-way.mp4";
 import hero_fw_1 from "../../assets/images/fw123.jpg";
 import BlurText from "../BlurText";
 
@@ -25,7 +25,7 @@ const HeroSection01 = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <h1 className="text-3xl font-rubikvinyl text-blue-500 leading-tight sm:text-5xl md:text-7xl">
+            <h1 className="text-3xl font-rubikvinyl text-blue-100 leading-tight sm:text-5xl md:text-7xl">
               See the world. <br />
               Create memories. <br />
               Travel with{" "}

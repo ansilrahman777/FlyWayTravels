@@ -24,15 +24,15 @@ const About = () => {
             </div>
 
             <div class="relative px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left">
-              <h1 class="text-4xl font-bold text-black sm:text-6xl xl:text-7xl">
+              <h1 class="text-4xl font-bold text-white sm:text-6xl xl:text-7xl">
                 Discover the World with Flyway Travel
               </h1>
-              <p class="mt-6 text-lg font-bold text-black sm:text-xl">
+              <p class="mt-6 text-lg font-bold text-white sm:text-xl">
                 Your trusted partner for stress-free journeys, luxury stays,
                 smooth visas, and unforgettable adventures — planned with care
                 and delivered with excellence.
               </p>
-              <p class="mt-4 text-base text-black font-bold max-w-xl">
+              <p class="mt-4 text-base text-white font-bold max-w-xl">
                 From your first enquiry to your safe return, our mission is to
                 make travel easy, inspiring, and perfectly suited to you.
               </p>
@@ -97,17 +97,17 @@ const About = () => {
             </div>
 
             <div className="text-center md:text-left order-2">
-              <h2 className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl mb-6">
+              <h2 className="text-3xl font-bold text-blwhiteack sm:text-4xl lg:text-5xl mb-6">
                 Our Mission & Vision
               </h2>
-              <p className="text-lg text-black font-semibold leading-relaxed text-justify">
+              <p className="text-lg text-white font-semibold leading-relaxed text-justify">
                 At Flyway Travel, our mission is simple — to make global travel
                 effortless, accessible, and memorable for every explorer. Our
                 vision is to be the trusted partner people choose when they want
                 expert visa support, the best flights, comfortable stays, and
                 reliable transfers — all handled with genuine care.
               </p>
-              <p className="mt-6 text-lg font-semibold text-black text-justify">
+              <p className="mt-6 text-lg font-semibold text-white text-justify">
                 We believe every journey should be stress-free, every traveler
                 should feel confident, and every experience should create
                 stories worth telling
@@ -129,11 +129,11 @@ const About = () => {
             </div>
 
             <div className="text-center md:text-left order-1">
-              <h2 className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl mb-6">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
                 Message from Founder
               </h2>
               <blockquote>
-                <p class="text-lg font-semibold leading-relaxed text-black text-justify">
+                <p class="text-lg font-semibold leading-relaxed text-white text-justify">
                   “Travel changes lives — it opens minds, builds memories, and
                   connects people in ways nothing else can. As someone who has
                   explored over 30+ countries, I know first-hand how special
@@ -143,8 +143,8 @@ const About = () => {
                 </p>
               </blockquote>
               <div class="mt-6 sm:flex sm:items-baseline sm:justify-center md:justify-start">
-                <p class="text-base font-semibold text-black">Jabir</p>
-                <p class="mt-2 text-base text-black sm:mt-0 sm:ml-2">
+                <p class="text-base font-semibold text-white">Jabir</p>
+                <p class="mt-2 text-base text-white sm:mt-0 sm:ml-2">
                   Founder & CEO
                 </p>
               </div>
@@ -165,10 +165,10 @@ const About = () => {
             </div>
 
             <div className="text-center md:text-left order-1 md:order-2">
-              <h2 className="text-3xl font-bold text-black sm:text-4xl lg:text-5xl mb-6">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
                 Meet Our Dedicated Team
               </h2>
-              <p className="text-lg text-black font-semibold leading-relaxed">
+              <p className="text-lg text-white font-semibold leading-relaxed">
                 At Flyway Travel, our greatest strength is our people. From
                 seasoned travel planners and visa experts to our friendly
                 support crew, every team member is driven by one goal: to make
@@ -176,7 +176,7 @@ const About = () => {
                 detail, solve every hiccup, and stay by your side — so you can
                 travel with complete peace of mind.
               </p>
-              <p className="mt-6 text-base font-semibold text-black">
+              <p className="mt-6 text-base font-semibold text-white">
                 Together, we go further.
               </p>
             </div>
@@ -187,21 +187,21 @@ const About = () => {
       <section class="py-16">
         <div class="mx-auto max-w-7xl">
           <div class="text-center">
-            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+            <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Why we are the Best
             </h2>
-            <p class="mt-2 text-base font-medium leading-tight text-black sm:text-lg lg:text-xl">
+            <p class="mt-2 text-base font-medium leading-tight text-white sm:text-lg lg:text-xl">
               We go the extra mile to make every trip smooth — from fast visas
               to best flight deals and trusted support, Flyway Travel is your
               hassle-free travel partner.
             </p>
           </div>
 
-          <div class="px-5 py-8 mt-12 rounded-lg bg-white/50 lg:mt-20 lg:p-16">
+          <div class="px-5 py-8 mt-12 rounded-lg bg-black/30 lg:mt-20 lg:p-16">
             <div class="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
               <div class="flex items-start">
                 <svg
-                  class="flex-shrink-0 w-16 h-16 text-blue-600"
+                  class="flex-shrink-0 w-16 h-16 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -215,10 +215,10 @@ const About = () => {
                   />
                 </svg>
                 <div class="ml-5">
-                  <h3 class="text-lg font-semibold text-black">
+                  <h3 class="text-lg font-semibold text-white">
                     Trusted by Thousands
                   </h3>
-                  <p class="mt-4 text-base text-black">
+                  <p class="mt-4 text-base text-white">
                     Over 3,500 happy travelers choose Flyway Travel every year
                     for stress-free trips worldwide.
                   </p>
@@ -227,7 +227,7 @@ const About = () => {
 
               <div class="flex items-start">
                 <svg
-                  class="flex-shrink-0 w-16 h-16 text-blue-600"
+                  class="flex-shrink-0 w-16 h-16 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -241,10 +241,10 @@ const About = () => {
                   />
                 </svg>
                 <div class="ml-5">
-                  <h3 class="text-lg font-semibold text-black">
+                  <h3 class="text-lg font-semibold text-white">
                     Dedicated Support Team
                   </h3>
-                  <p class="mt-4 text-base text-black">
+                  <p class="mt-4 text-base text-white">
                     From visa help to last-minute changes, our friendly experts
                     are always just a call away.
                   </p>
@@ -253,7 +253,7 @@ const About = () => {
 
               <div class="flex items-start">
                 <svg
-                  class="flex-shrink-0 w-16 h-16 text-blue-600"
+                  class="flex-shrink-0 w-16 h-16 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -267,10 +267,10 @@ const About = () => {
                   />
                 </svg>
                 <div class="ml-5">
-                  <h3 class="text-lg font-semibold text-black">
+                  <h3 class="text-lg font-semibold text-white">
                     100+ Destinations
                   </h3>
-                  <p class="mt-4 text-base text-black">
+                  <p class="mt-4 text-base text-white">
                     Whether it’s a city break, beach holiday, or adventure tour,
                     we take you wherever you want to go.
                   </p>
@@ -279,7 +279,7 @@ const About = () => {
 
               <div class="flex items-start">
                 <svg
-                  class="flex-shrink-0 w-16 h-16 text-blue-600"
+                  class="flex-shrink-0 w-16 h-16 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -293,10 +293,10 @@ const About = () => {
                   />
                 </svg>
                 <div class="ml-5">
-                  <h3 class="text-lg font-semibold text-black">
+                  <h3 class="text-lg font-semibold text-white">
                     Safe & Secure Payments
                   </h3>
-                  <p class="mt-4 text-base text-black">
+                  <p class="mt-4 text-base text-white">
                     Book with peace of mind — your payments and bookings are
                     protected with industry-leading security.
                   </p>

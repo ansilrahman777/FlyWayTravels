@@ -23,9 +23,9 @@ const Header = () => {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "#", icon: <FaInstagram className="h-5 w-5" /> },
-    { name: "Facebook", url: "#", icon: <FaFacebookF className="h-5 w-5" /> },
-    { name: "WhatsApp", url: "#", icon: <FaWhatsapp className="h-5 w-5" /> },
+    { name: "Instagram", url: "https://www.instagram.com/flywaytravel_auh", icon: <FaInstagram className="h-5 w-5" /> },
+    { name: "Facebook", url: "https://www.facebook.com/flywaytravelauh", icon: <FaFacebookF className="h-5 w-5" /> },
+    { name: "WhatsApp", url: "https://wa.me/971509845162", icon: <FaWhatsapp className="h-5 w-5" /> },
   ];
 
   return (

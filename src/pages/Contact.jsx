@@ -160,11 +160,11 @@ const Contact = () => {
               </div>
 
               <div className="mt-10 flex space-x-6">
-                <a href="" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
-                <a href="" className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
-                <a href="" className="text-white hover:text-red-700"><FaYoutube size={24} /></a>
-                <a href="" className="text-white hover:text-red-700"><FaTiktok size={24} /></a>
-                <a href="" className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
+                <a href="https://wa.me/971509845162" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
+                <a href="https://www.instagram.com/flywaytravel_auh" className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
+                {/* <a href="" className="text-white hover:text-red-700"><FaYoutube size={24} /></a> */}
+                {/* <a href="" className="text-white hover:text-red-700"><FaTiktok size={24} /></a> */}
+                <a href="https://www.facebook.com/flywaytravelauh" className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
               </div>
             </div>
 

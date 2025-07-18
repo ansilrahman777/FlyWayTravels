@@ -38,7 +38,7 @@ const Footer = () => {
 
           <ul className="flex flex-wrap justify-center gap-6 mt-8">
             <li>
-              <a href="javascript:void(0)">
+              <a href="https://www.facebook.com/flywaytravelauh">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="fill-blue-600 w-8 h-8"
@@ -52,29 +52,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8"
-                  viewBox="0 0 112.196 112.196"
-                >
-                  <circle
-                    cx="56.098"
-                    cy="56.097"
-                    r="56.098"
-                    fill="#007ab9"
-                    data-original="#007ab9"
-                  />
-                  <path
-                    fill="#fff"
-                    d="M89.616 60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118-3.705 0-5.906 2.491-6.878 4.903-.353.862-.444 2.059-.444 3.268v22.524h-13.41s.18-36.546 0-40.329h13.411v5.715c-.027.045-.065.089-.089.132h.089v-.132c1.782-2.742 4.96-6.662 12.085-6.662 8.822 0 15.436 5.764 15.436 18.149zm-54.96-36.642c-4.587 0-7.588 3.011-7.588 6.967 0 3.872 2.914 6.97 7.412 6.97h.087c4.677 0 7.585-3.098 7.585-6.97-.089-3.956-2.908-6.967-7.496-6.967zm-6.791 59.77H41.27v-40.33H27.865v40.33z"
-                    data-original="#f1f2f2"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
+              <a href="https://www.instagram.com/flywaytravel_auh">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8"
@@ -124,24 +102,22 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)">
+              <a
+                href="https://wa.me/971509845162"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8"
-                  viewBox="0 0 1227 1227"
+                  viewBox="0 0 32 32"
+                  fill="lightgreen"
                 >
-                  <path
-                    d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z"
-                    data-original="#000000"
-                  />
-                  <path
-                    fill="#fff"
-                    d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z"
-                    data-original="#ffffff"
-                  />
+                  <path d="M16.001 2.001c-7.732 0-14 6.268-14 14a13.94 13.94 0 002.048 7.27L2 30l6.868-2.015A13.937 13.937 0 0016.001 30c7.732 0 14-6.268 14-14s-6.268-14-14-14zm0 2c6.627 0 12 5.373 12 12 0 6.627-5.373 12-12 12a11.92 11.92 0 01-6.112-1.667l-.43-.26-4.068 1.194 1.194-4.068-.26-.43A11.92 11.92 0 014 16.001c0-6.627 5.373-12 12-12zm5.416 16.682c-.294-.147-1.747-.861-2.019-.959-.271-.098-.469-.147-.666.148-.196.294-.764.959-.937 1.157-.173.196-.345.221-.639.074-.294-.148-1.24-.456-2.36-1.453-.873-.779-1.461-1.743-1.633-2.037-.173-.294-.018-.452.13-.599.134-.133.294-.345.441-.518.147-.173.196-.295.295-.49.098-.196.049-.37-.025-.518-.074-.148-.666-1.611-.914-2.207-.241-.579-.487-.501-.666-.511l-.57-.01c-.196 0-.518.074-.79.37s-1.038 1.014-1.038 2.475 1.063 2.866 1.211 3.063c.148.196 2.091 3.189 5.07 4.469.708.305 1.261.487 1.693.623.712.227 1.36.195 1.872.119.571-.085 1.747-.713 1.994-1.401.246-.686.246-1.273.172-1.401-.074-.127-.267-.196-.561-.343z" />
                 </svg>
               </a>
             </li>
+
           </ul>
         </div>
 
@@ -163,7 +139,7 @@ const Footer = () => {
             </div>
             <a href="javascript:void(0)" className="text-black text-sm ml-3">
               <small className="block">Tel</small>
-              <span className="font-medium">180-548-2588</span>
+              <span className="font-medium">02 641 4434</span>
             </a>
           </li>
           <li className="flex items-center">
@@ -183,7 +159,7 @@ const Footer = () => {
             </div>
             <a href="javascript:void(0)" className="text-black text-sm ml-3">
               <small className="block">Mail</small>
-              <span className="font-medium">info@example.com</span>
+              <span className="font-medium">info@flywaytraveluae.com</span>
             </a>
           </li>
           <li className="flex items-center">
@@ -207,27 +183,23 @@ const Footer = () => {
             </div>
             <a href="javascript:void(0)" className="text-black text-sm ml-3">
               <small className="block">Address</small>
-              <span className="font-medium">123 Main Street City, Country</span>
+              <span className="font-medium">Al Nahyan - E25 - Abu Dhabi</span>
             </a>
           </li>
           <li className="flex items-center">
             <div className="bg-white/50  h-10 w-10 rounded-full flex items-center justify-center shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                height="20px"
+                className="w-8 h-8"
+                viewBox="0 0 32 32"
                 fill="#000000"
-                viewBox="0 0 100 100"
               >
-                <path
-                  d="M83 23h-3V11c0-3.309-2.692-6-6-6H26c-3.308 0-6 2.691-6 6v12h-3C8.729 23 2 29.729 2 38v30c0 4.963 4.037 9 9 9h9v12c0 3.309 2.692 6 6 6h48c3.308 0 6-2.691 6-6V77h9c4.963 0 9-4.037 9-9V38c0-8.271-6.729-15-15-15zM26 11h48v12H26zm0 78V59h48v30zm66-21c0 1.654-1.345 3-3 3h-9V59h3a3 3 0 1 0 0-6H17a3 3 0 1 0 0 6h3v12h-9c-1.655 0-3-1.346-3-3V38c0-4.963 4.037-9 9-9h66c4.963 0 9 4.037 9 9zm-27 0a3 3 0 0 1-3 3H38a3 3 0 1 1 0-6h24a3 3 0 0 1 3 3zm0 12a3 3 0 0 1-3 3H38a3 3 0 1 1 0-6h24a3 3 0 0 1 3 3zm21-42a3 3 0 0 1-3 3h-6a3 3 0 1 1 0-6h6a3 3 0 0 1 3 3z"
-                  data-original="#000000"
-                />
+                <path d="M16.001 2.001c-7.732 0-14 6.268-14 14a13.94 13.94 0 002.048 7.27L2 30l6.868-2.015A13.937 13.937 0 0016.001 30c7.732 0 14-6.268 14-14s-6.268-14-14-14zm0 2c6.627 0 12 5.373 12 12 0 6.627-5.373 12-12 12a11.92 11.92 0 01-6.112-1.667l-.43-.26-4.068 1.194 1.194-4.068-.26-.43A11.92 11.92 0 014 16.001c0-6.627 5.373-12 12-12zm5.416 16.682c-.294-.147-1.747-.861-2.019-.959-.271-.098-.469-.147-.666.148-.196.294-.764.959-.937 1.157-.173.196-.345.221-.639.074-.294-.148-1.24-.456-2.36-1.453-.873-.779-1.461-1.743-1.633-2.037-.173-.294-.018-.452.13-.599.134-.133.294-.345.441-.518.147-.173.196-.295.295-.49.098-.196.049-.37-.025-.518-.074-.148-.666-1.611-.914-2.207-.241-.579-.487-.501-.666-.511l-.57-.01c-.196 0-.518.074-.79.37s-1.038 1.014-1.038 2.475 1.063 2.866 1.211 3.063c.148.196 2.091 3.189 5.07 4.469.708.305 1.261.487 1.693.623.712.227 1.36.195 1.872.119.571-.085 1.747-.713 1.994-1.401.246-.686.246-1.273.172-1.401-.074-.127-.267-.196-.561-.343z" />
               </svg>
             </div>
-            <a href="javascript:void(0)" className="text-black text-sm ml-3">
-              <small className="block">Fax</small>
-              <span className="font-medium">+1-548-2588</span>
+            <a href="https://wa.me/971509845162" className="text-black text-sm ml-3">
+              <small className="block">WhatsApp</small>
+              <span className="font-medium">+971509845162</span>
             </a>
           </li>
         </ul>

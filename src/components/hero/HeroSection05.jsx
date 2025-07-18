@@ -15,9 +15,9 @@ const HeroSection05 = () => {
   return (
     <section className="w-full  text-white overflow-hidden">
       {/* TOP HERO */}
-      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-center md:gap-12">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-center md:gap-12">
         <div className="flex-1 text-center md:text-left">
-          <span className="inline-block py-1 px-3 text-sm font-semibold tracking-wider text-primary uppercase rounded-full bg-primary/10 mb-4">
+          <span className="inline-block py-1 font-emilys text-sm font-semibold tracking-wider text-primary uppercase rounded-full bg-primary/10 mb-4">
             About Flyway Travel
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-emilys font-bold leading-tight mb-6">
@@ -67,7 +67,7 @@ const HeroSection05 = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row md:items-center md:gap-12">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row md:items-center md:gap-12">
         {/* LEFT IMAGE + TESTIMONIAL */}
         <div className="relative flex-1 mb-12 md:mb-0 flex justify-center md:justify-start">
           <div className="absolute -left-2 top-0 space-y-4">

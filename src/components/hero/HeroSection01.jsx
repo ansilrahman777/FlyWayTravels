@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../../assets/videos/fly-way.mp4";
+import vedioFile from "../../assets/videos/flyway1.mp4";
 import hero_fw_1 from "../../assets/images/fw123.jpg";
 import BlurText from "../BlurText";
 

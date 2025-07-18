@@ -9,9 +9,9 @@ import { BiPhone } from "react-icons/bi";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp, FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaRegCommentDots } from "react-icons/fa";
 import { LuSendHorizontal } from "react-icons/lu";
 
-const SERVICE_ID = "service_79t66tr";
-const TEMPLATE_ID = "template_m4pi72m";
-const USER_ID = "9vUgntlYQLJrRPGoy";
+const SERVICE_ID = "service_hxmeltg";
+const TEMPLATE_ID = "ctemplate_4cuysme";
+const USER_ID = "fOcu1jHpv6dTSjiad";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -119,7 +119,7 @@ const Contact = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                  <h2 class="ml-3 text-4xl font-bold text-white">3,500+</h2>
+                  <h2 class="ml-3 text-4xl font-bold text-white">10000+</h2>
                 </div>
                 <p class="max-w-xs mt-1.5 text-base text-white">
                   Happy travelers trust Flyway every year for honest advice,
@@ -134,7 +134,6 @@ const Contact = () => {
       <section className="overflow-hidden bg-fixed bg-cover bg-center min-h-screen">
         <div className="mx-auto w-full max-w-7xl px-5 py-5 md:px-10 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-20 items-start">
-            {/* Contact Info */}
             <div className="md:col-span-2">
               <h2 className="font-bold text-white">Contact us</h2>
               <h1 className="mb-3 pb-4 text-3xl font-bold text-white md:text-5xl">
@@ -148,28 +147,27 @@ const Contact = () => {
               <div className="space-y-2 font-normal text-lg text-white">
                 <div className="flex items-center space-x-3">
                   <FaEnvelope className="text-white" />
-                  <span>carnationauh@gmail.com</span>
+                  <span>info@flywaytravel.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FaPhone className="text-white" />
-                  <span>+971 2517 5703 | +971 52 252 0955</span>
+                  <span>02 641 4434</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FaMapMarkerAlt className="text-white" />
-                  <span>Building No: 205, Musaffah - M11, Abu Dhabi</span>
+                  <span>Al Nahyan - E25 - Abu Dhabi</span>
                 </div>
               </div>
 
               <div className="mt-10 flex space-x-6">
-                <a href="https://wa.link/sikj7y" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
-                <a href="https://www.instagram.com/carnationautogarage?igsh=..." className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
-                <a href="https://youtube.com/@cnagcarnationautogarage" className="text-white hover:text-red-700"><FaYoutube size={24} /></a>
-                <a href="https://www.tiktok.com/@user1243615341681" className="text-white hover:text-red-700"><FaTiktok size={24} /></a>
-                <a href="https://www.facebook.com/p/Car-Nation-Auto-Garage-..." className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
+                <a href="" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
+                <a href="" className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
+                <a href="" className="text-white hover:text-red-700"><FaYoutube size={24} /></a>
+                <a href="" className="text-white hover:text-red-700"><FaTiktok size={24} /></a>
+                <a href="" className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="md:col-span-3">
               <form onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-8">
@@ -231,7 +229,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Map */}
       <div style={{ overflow: "hidden" }}>
       <div className="relative w-full h-96">
         <iframe

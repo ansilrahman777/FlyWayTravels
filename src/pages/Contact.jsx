@@ -1,35 +1,67 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import {
+  AiOutlineUser,
+  AiOutlineMail
+} from "react-icons/ai";
+import { MdSubject } from "react-icons/md";
+import { BiPhone } from "react-icons/bi";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp, FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaRegCommentDots } from "react-icons/fa";
+import { LuSendHorizontal } from "react-icons/lu";
+
+const SERVICE_ID = "service_79t66tr";
+const TEMPLATE_ID = "template_m4pi72m";
+const USER_ID = "9vUgntlYQLJrRPGoy";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic here
-    alert("Thank you for your message! We will contact you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    setSubmitting(true);
+
+    try {
+      const templateParams = {
+        ...formData,
+        time: new Date().toLocaleString(),
+      };
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
+
+      alert("Thank you for your message! We will contact you soon.");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
-    <main
-      style={{
-        backgroundImage:
-          "linear-gradient(135deg, #db1212 5%, #7a43bf 38%, #3dd7d7 69%, #b1c709 95%)",
-        color: "#fff",
-      }}
-    >
-      <section class="overflow-hidden">
+    <main className="text-white" style={{
+      backgroundImage: "linear-gradient(135deg, #db1212 5%, #7a43bf 38%, #3dd7d7 69%, #b1c709 95%)",
+    }}>
+       <section class="overflow-hidden">
         <div class="flex flex-col font-emilys lg:flex-row lg:items-stretch lg:min-h-[600px]">
           <div class="relative flex items-center justify-center w-full lg:order-1 lg:w-7/12">
             <div class="absolute bottom-0 right-0 hidden lg:block">
@@ -99,238 +131,117 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="container mx-auto ">
-        <div className="text-center m-20 font-emilys">
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl font-bold mb-6 font-emilys text-black"
-          >
-            Contact Us
-          </motion.h1>
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "120px" }}
-            transition={{ duration: 0.8 }}
-            className="h-1 font-emilys text-black mx-auto rounded-full"
-          />
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-xl text-black max-w-3xl mx-auto"
-          >
-            Have questions or ready to book your next adventure? Our team is
-            here to help!
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1  py-12 lg:grid-cols-2 gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="bg-white rounded-2xl shadow-xl p-8"
-          >
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">
-              Send us a message
-            </h2>
-
-            <form onSubmit={handleSubmit}>
-              <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
-                  placeholder="you@example.com"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
-                  placeholder="How can we help?"
-                />
-              </div>
-
-              <div className="mb-8">
-                <label htmlFor="message" className="block text-gray-700 mb-2">
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
-                  placeholder="Tell us about your travel plans..."
-                ></textarea>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                type="submit"
-                className="w-full bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                Send Message
-              </motion.button>
-            </form>
-          </motion.div>
-
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="bg-gradient-to-br from-sky-500 to-indigo-600 rounded-2xl shadow-xl p-10 text-white mb-10">
-              <h2 className="text-3xl font-bold mb-8">Get in touch</h2>
-
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Phone</h3>
-                    <p>+1 (555) 123-4567</p>
-                  </div>
+      <section className="overflow-hidden bg-fixed bg-cover bg-center min-h-screen">
+        <div className="mx-auto w-full max-w-7xl px-5 py-5 md:px-10 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-20 items-start">
+            {/* Contact Info */}
+            <div className="md:col-span-2">
+              <h2 className="font-bold text-white">Contact us</h2>
+              <h1 className="mb-3 pb-4 text-3xl font-bold text-white md:text-5xl">
+                Have questions?
+                <br />
+                Get in touch!
+              </h1>
+              <p className="mb-3 text-white font-normal text-justify">
+                Have a question or need to book a service? We're here to help!
+              </p>
+              <div className="space-y-2 font-normal text-lg text-white">
+                <div className="flex items-center space-x-3">
+                  <FaEnvelope className="text-white" />
+                  <span>carnationauh@gmail.com</span>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Email</h3>
-                    <p>contact@flywaytravel.com</p>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <FaPhone className="text-white" />
+                  <span>+971 2517 5703 | +971 52 252 0955</span>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Address</h3>
-                    <p>123 Travel Avenue, Paradise City, PC 12345</p>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <FaMapMarkerAlt className="text-white" />
+                  <span>Building No: 205, Musaffah - M11, Abu Dhabi</span>
                 </div>
+              </div>
+
+              <div className="mt-10 flex space-x-6">
+                <a href="https://wa.link/sikj7y" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
+                <a href="https://www.instagram.com/carnationautogarage?igsh=..." className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
+                <a href="https://youtube.com/@cnagcarnationautogarage" className="text-white hover:text-red-700"><FaYoutube size={24} /></a>
+                <a href="https://www.tiktok.com/@user1243615341681" className="text-white hover:text-red-700"><FaTiktok size={24} /></a>
+                <a href="https://www.facebook.com/p/Car-Nation-Auto-Garage-..." className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-xl p-10 text-white">
-              <h2 className="text-3xl font-bold mb-6">Business Hours</h2>
+            {/* Contact Form */}
+            <div className="md:col-span-3">
+              <form onSubmit={handleSubmit}>
+                <div className="grid sm:grid-cols-2 gap-8">
+                  <div className="relative flex items-center w-full">
+                    <AiOutlineUser className="absolute left-2 text-white" size={20} />
+                    <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                  </div>
 
-              <div className="space-y-4">
-                <div className="flex justify-between border-b border-white/30 pb-3">
-                  <span>Monday - Friday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between border-b border-white/30 pb-3">
-                  <span>Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span className="font-medium">Closed</span>
-                </div>
-              </div>
+                  <div className="relative flex items-center">
+                    <MdSubject className="absolute left-2 text-white" size={20} />
+                    <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange}
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                  </div>
 
-              <div className="mt-8 pt-6 border-t border-white/30">
-                <h3 className="text-xl font-bold mb-4">Emergency Support</h3>
-                <p className="mb-4">
-                  For travelers needing assistance during trips:
-                </p>
-                <p className="text-xl font-bold">+1 (555) 987-6543</p>
-              </div>
+                  <div className="relative flex items-center">
+                    <BiPhone className="absolute left-2 text-white" size={20} />
+                    <input type="text" name="phone" placeholder="Phone No." value={formData.phone} onChange={handleChange}
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                  </div>
+
+                  <div className="relative flex items-center">
+                    <AiOutlineMail className="absolute left-2 text-white" size={20} />
+                    <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                  </div>
+
+                  <div className="relative flex items-center sm:col-span-2">
+                    <FaRegCommentDots className="absolute left-2 top-4 text-white" size={20} />
+                    <textarea name="message" placeholder="How can we help you?" rows="5" value={formData.message} onChange={handleChange}
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" required />
+                  </div>
+                </div>
+
+                <button type="submit" disabled={submitting}
+                  className={`relative mt-12 lg:ml-auto max-lg:w-full rounded-lg inline-flex items-center px-9 py-3 overflow-hidden text-base font-medium border ${
+                    submitting
+                      ? "bg-gray-300 text-black cursor-not-allowed"
+                      : "text-white border-white hover:text-black hover:bg-white"
+                  }`}>
+                  <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <LuSendHorizontal className="ml-2" size={18} />
+                  </span>
+                  <span className="relative">
+                    {submitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : "Send Message"}
+                  </span>
+                </button>
+              </form>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
+      {/* Google Map */}
       <div style={{ overflow: "hidden" }}>
+      <div className="relative w-full h-96">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.523346885761!2d54.38211257449502!3d24.467317360878045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6737a02e677b%3A0xc65731d635c5380b!2sFLY%20WAY%20TRAVEL!5e0!3m2!1sen!2sae!4v1752847625938!5m2!1sen!2sae"
+          allowFullScreen
+          aria-hidden="false"
+          tabIndex="10"
+        ></iframe>
+      </div>
         <svg
           preserveAspectRatio="none"
           viewBox="0 0 1200 120"

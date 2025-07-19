@@ -100,14 +100,14 @@ const About = () => {
               <h2 className="text-3xl font-bold text-blwhiteack sm:text-4xl lg:text-5xl mb-6">
                 Our Mission & Vision
               </h2>
-              <p className="text-lg text-white font-semibold leading-relaxed text-justify">
+              <p className="text-lg text-white font-amita font-semibold leading-relaxed text-justify">
                 At Flyway Travel, our mission is simple — to make global travel
                 effortless, accessible, and memorable for every explorer. Our
                 vision is to be the trusted partner people choose when they want
                 expert visa support, the best flights, comfortable stays, and
                 reliable transfers — all handled with genuine care.
               </p>
-              <p className="mt-6 text-lg font-semibold text-white text-justify">
+              <p className="mt-6 text-lg font-amita font-semibold text-white text-justify">
                 We believe every journey should be stress-free, every traveler
                 should feel confident, and every experience should create
                 stories worth telling
@@ -133,7 +133,7 @@ const About = () => {
                 Message from Founder
               </h2>
               <blockquote>
-                <p class="text-lg font-semibold leading-relaxed text-white text-justify">
+                <p class="text-lg font-semibold font-amita leading-relaxed text-white text-justify">
                   “Travel changes lives — it opens minds, builds memories, and
                   connects people in ways nothing else can. As someone who has
                   explored over 30+ countries, I know first-hand how special
@@ -142,8 +142,8 @@ const About = () => {
                   passion that only true travelers understand.”
                 </p>
               </blockquote>
-              <div class="mt-6 sm:flex sm:items-baseline sm:justify-center md:justify-start">
-                <p class="text-base font-semibold text-white">Jabir</p>
+              <div class="mt-6 sm:flex sm:items-baseline font-amita sm:justify-center md:justify-start">
+                <p class="text-base font-semibold text-white">Mohmmed Jabir</p>
                 <p class="mt-2 text-base text-white sm:mt-0 sm:ml-2">
                   Founder & CEO
                 </p>
@@ -168,7 +168,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
                 Meet Our Dedicated Team
               </h2>
-              <p className="text-lg text-white font-semibold leading-relaxed">
+              <p className="text-lg font-amita text-white font-semibold leading-relaxed">
                 At Flyway Travel, our greatest strength is our people. From
                 seasoned travel planners and visa experts to our friendly
                 support crew, every team member is driven by one goal: to make
@@ -176,7 +176,7 @@ const About = () => {
                 detail, solve every hiccup, and stay by your side — so you can
                 travel with complete peace of mind.
               </p>
-              <p className="mt-6 text-base font-semibold text-white">
+              <p className="mt-6 font-amita text-base font-semibold text-white">
                 Together, we go further.
               </p>
             </div>

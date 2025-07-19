@@ -31,7 +31,7 @@ const HeroSection01 = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <h1 className="text-3xl font-rubikvinyl text-blue-100 leading-tight sm:text-5xl md:text-7xl">
+            <h1 className="text-3xl font-rubikvinyl text-blue-600 leading-tight sm:text-5xl md:text-7xl">
               See the world. <br />
               Create memories. <br />
               Travel with{" "}

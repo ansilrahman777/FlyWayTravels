@@ -2,21 +2,83 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaPlaneUp } from "react-icons/fa6";
 
+import DubaiCityTour from "../../assets/carousel/DubaiCityTour.jpg";
+import AbuDhabiDesertSafari from "../../assets/carousel/AbuDhabiDesertSafari.jpg";
+import DubaiMarinaYachtRide from "../../assets/carousel/DubaiMarinaYachtRide.jpg";
+import IstanbulBosphorusCruise from "../../assets/carousel/IstanbulBosphorusCruise.jpg";
+import VeniceGondolaRide from "../../assets/carousel/VeniceGondolaRide.jpg";
+import LondonCitySightseeing from "../../assets/carousel/LondonCitySightseeing.jpg";
+import IndiaTajMahalVisit from "../../assets/carousel/IndiaTajMahalVisit.jpg";
+import KazakhstanSnowAdventure from "../../assets/carousel/KazakhstanSnowAdventure.jpg";
+import MoroccoHotAirBalloon from "../../assets/carousel/MoroccoHotAirBalloon.jpg";
+import SwitzerlandParagliding from "../../assets/carousel/SwitzerlandParagliding.jpg";
+import GeorgiaGudauriSkiTrip from "../../assets/carousel/GeorgiaGudauriSkiTrip.jpg";
+import KyrgyzstanNomadVillageTour from "../../assets/carousel/KyrgyzstanNomadVillageTour.jpg";
+import AzerbaijanBakuOldCity from "../../assets/carousel/AzerbaijanBakuOldCity.jpg";
+import SaudiArabiaHajjUmrahPackage from "../../assets/carousel/SaudiArabiaHajj&UmrahPackage.jpg";
+import FranceEiffelTowerVisit from "../../assets/carousel/FranceEiffelTowerVisit.jpg";
+
 const slides = [
-
   {
-    title: "Tokyo\nAdventure",
-    image: "https://picsum.photos/id/1043/700/350",
+    title: "Dubai\nCity Tour",
+    image: DubaiCityTour,
   },
   {
-    title: "New York\nCity Tour",
-    image: "https://picsum.photos/id/1011/700/350",
+    title: "Abu Dhabi\nDesert Safari",
+    image: AbuDhabiDesertSafari,
   },
   {
-    title: "Santorini\nGreece",
-    image: "https://picsum.photos/id/1016/700/350",
-  }
-
+    title: "Dubai\nMarina Yacht Ride",
+    image: DubaiMarinaYachtRide,
+  },
+  {
+    title: "Istanbul\nBosphorus Cruise",
+    image: IstanbulBosphorusCruise,
+  },
+  {
+    title: "Venice\nGondola Ride",
+    image: VeniceGondolaRide,
+  },
+  {
+    title: "London\nCity Sightseeing",
+    image: LondonCitySightseeing,
+  },
+  {
+    title: "India\nTaj Mahal Visit",
+    image: IndiaTajMahalVisit,
+  },
+  {
+    title: "Kazakhstan\nSnow Adventure",
+    image: KazakhstanSnowAdventure,
+  },
+  {
+    title: "Morocco\nHot Air Balloon",
+    image: MoroccoHotAirBalloon,
+  },
+  {
+    title: "Switzerland\nParagliding",
+    image: SwitzerlandParagliding,
+  },
+  {
+    title: "Georgia\nGudauri Ski Trip",
+    image: GeorgiaGudauriSkiTrip,
+  },
+  {
+    title: "Kyrgyzstan\nNomad Village Tour",
+    image: KyrgyzstanNomadVillageTour,
+  },
+  {
+    title: "Azerbaijan\nBaku Old City",
+    image: AzerbaijanBakuOldCity,
+  },
+  {
+    title: "Saudi Arabia\nHajj & Umrah Package",
+    image: SaudiArabiaHajjUmrahPackage,
+  },
+  {
+    title: "France\nEiffel Tower Visit",
+    image: FranceEiffelTowerVisit,
+  },
 ];
 
 const HeroSection04 = () => {
@@ -62,7 +124,7 @@ const HeroSection04 = () => {
                   selectedIndex === index ? "opacity-100" : "opacity-30"
                 } overflow-visible`}
               >
-                <div className="relative w-4/5 h-[250px] rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative w-4/5 h-[350px] rounded-xl overflow-hidden shadow-2xl">
                   <img
                     src={slide.image}
                     alt={slide.title}

@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
-import vedioFile from "../../assets/videos/flyway1.mp4";
+import webmFile from "../../assets/videos/video.webm";
+import mp4File from "../../assets/videos/video.mp4";
 import hero_fw_1 from "../../assets/images/fw123.jpg";
+import heroPoster from "../../assets/images/poster.jpg";
 import BlurText from "../BlurText";
 
 const HeroSection01 = () => {
@@ -9,12 +11,16 @@ const HeroSection01 = () => {
     <div className="relative text-white overflow-hidden">
       <video
         className="absolute top-0 left-0 w-full h-screen object-cover z-0"
-        src={vedioFile}
         autoPlay
         muted
         loop
         playsInline
-      />
+        poster={heroPoster}
+
+      >
+        <source src={webmFile} type="video/webm" />
+        <source src={mp4File} type="video/mp4" />
+      </video>
       <div className="relative z-10 flex h-screen flex-col justify-between">
         <div className="flex items-center justify-center min-h-screen px-4">
           <div className="flex items-stretch justify-center gap-4">

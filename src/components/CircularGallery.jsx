@@ -1,6 +1,21 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from "ogl";
 import { useEffect, useRef } from "react";
-
+import img1 from '../assets/scroll/1.jpg';
+import img2 from '../assets/scroll/2.jpg';
+import img3 from '../assets/scroll/3.jpg';
+import img4 from '../assets/scroll/4.jpg';
+import img5 from '../assets/scroll/5.jpg';
+import img6 from '../assets/scroll/6.jpg';
+import img7 from '../assets/scroll/7.jpg';
+import img8 from '../assets/scroll/8.jpg';
+import img9 from '../assets/scroll/9.jpg';
+import img10 from '../assets/scroll/10.jpg';
+import img11 from '../assets/scroll/11.jpg';
+import img12 from '../assets/scroll/12.jpg';
+import img13 from '../assets/scroll/13.jpg';
+import img14 from '../assets/scroll/14.jpg';
+import img15 from '../assets/scroll/15.jpg';
+import img16 from '../assets/scroll/16.jpg';
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -325,18 +340,24 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: "Bridge" },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: "Desk Setup" },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: "Waterfall" },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: "Strawberries" },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: "Deep Diving" },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: "Train Track" },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: "Santorini" },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: "Blurry Lights" },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: "New York" },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: "Good Boy" },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+
+      { image: img1, text: "" },
+      { image: img2, text: "" },
+      { image: img3, text: "" },
+      { image: img4, text: "" },
+      { image: img5, text: "" },
+      { image: img6, text: "" },
+      { image: img7, text: "" },
+      { image: img8, text: "" },
+      { image: img9, text: "" },
+      { image: img10, text: "" },
+      { image: img11, text: "" },
+      { image: img12, text: "" },
+      { image: img13, text: "" },
+      { image: img14, text: "" },
+      { image: img15, text: "" },
+      { image: img16, text: "" },
+
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

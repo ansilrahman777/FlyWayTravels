@@ -30,7 +30,7 @@ const HeroSection05 = () => {
             guide you every step of the way to your dream destination.
           </p>
           <div className="mt-10 flex items-center justify-center md:justify-start gap-4">
-            <div className="flex -space-x-2">
+            {/* <div className="flex -space-x-2">
               <img
                 className="w-10 h-10 rounded-full border-2 border-white"
                 src="https://randomuser.me/api/portraits/men/15.jpg"
@@ -46,7 +46,7 @@ const HeroSection05 = () => {
                 src="https://randomuser.me/api/portraits/men/44.jpg"
                 alt="Client"
               />
-            </div>
+            </div> */}
             <div>
               <div className="flex items-center">
                 ✈️ 🌍 ⭐️⭐️⭐️⭐️⭐️
@@ -60,10 +60,16 @@ const HeroSection05 = () => {
           <img
             src={img1}
             alt="Traveling the World"
-            
-            className="w-full h-auto object-cover rounded-md"
+            className="
+            w-full 
+            max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 
+            h-auto 
+            object-cover 
+            rounded-md
+          "
           />
         </div>
+
       </div>
 
       {/* BOTTOM CONTENT */}

@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 import {
     FaPlane,
     FaPassport,
@@ -59,6 +61,8 @@ const ServiceSection = () => {
             features: ["Best routes", "Flexible booking", "All major airlines"],
             color: "blue",
             image: airlinetickets,
+            slug: "contact",
+
         },
         {
             icon: <FaPassport className="text-3xl" />,
@@ -68,6 +72,7 @@ const ServiceSection = () => {
             features: ["Fast processing", "Expert help", "Wide country coverage"],
             color: "green",
             image: touristvisas,
+            slug: "contact",
         },
         {
             icon: <FaGlobeAsia className="text-3xl" />,
@@ -77,6 +82,7 @@ const ServiceSection = () => {
             features: ["Hassle-free approvals", "Updated requirements", "Local expertise"],
             color: "orange",
             image: uaebahrainomanvisas,
+            slug: "contact",
         },
         {
             icon: <FaHotel className="text-3xl" />,
@@ -86,6 +92,7 @@ const ServiceSection = () => {
             features: ["Handpicked stays", "Great locations", "Best price guarantee"],
             color: "purple",
             image: hotelbooking,
+            slug: "contact",
         },
         {
             icon: <FaShieldAlt className="text-3xl" />,
@@ -95,6 +102,7 @@ const ServiceSection = () => {
             features: ["Emergency coverage", "Medical protection", "Easy claims"],
             color: "red",
             image: travelinsurance,
+            slug: "contact",
         },
         {
             icon: <FaCarSide className="text-3xl" />,
@@ -104,6 +112,7 @@ const ServiceSection = () => {
             features: ["Reliable drivers", "Clean vehicles", "24/7 availability"],
             color: "yellow",
             image: airporttransfers,
+            slug: "contact",
         },
         {
             icon: <FaGlobe className="text-3xl" />,
@@ -113,6 +122,7 @@ const ServiceSection = () => {
             features: ["Tourist & business visas", "Application help", "Global destinations"],
             color: "teal",
             image: worldwidevisaservice,
+            slug: "contact",
         },
         {
             icon: <FaUsers className="text-3xl" />,
@@ -122,6 +132,7 @@ const ServiceSection = () => {
             features: ["Clear steps", "Trusted advice", "Full support"],
             color: "pink",
             image: familyvisaservices,
+            slug: "contact",
         },
         {
             icon: <FaFileAlt className="text-3xl" />,
@@ -131,6 +142,7 @@ const ServiceSection = () => {
             features: ["Residency services", "Renewals & extensions", "Document clearances"],
             color: "indigo",
             image: allimmigrationworks,
+            slug: "contact",
         },
         {
             icon: <FaGlobe className="text-3xl" />,
@@ -140,6 +152,7 @@ const ServiceSection = () => {
             features: ["Paperwork help", "Embassy updates", "Smooth approvals"],
             color: "cyan",
             image: schengenvisa,
+            slug: "contact",
         },
         {
             icon: <FaKaaba className="text-3xl" />,
@@ -149,6 +162,7 @@ const ServiceSection = () => {
             features: ["Authentic guidance", "Approved agents", "Full support"],
             color: "amber",
             image: hajjnumrahvisa,
+            slug: "contact",
         },
         {
             icon: <FaUmbrellaBeach className="text-3xl" />,
@@ -158,6 +172,7 @@ const ServiceSection = () => {
             features: ["Custom itineraries", "Flights & hotels", "Local activities"],
             color: "lime",
             image: holidaypackages,
+            slug: "contact",
         },
         {
             icon: <FaUserFriends className="text-3xl" />,
@@ -167,6 +182,7 @@ const ServiceSection = () => {
             features: ["Tailored group rates", "Expert leaders", "Sightseeing & activities"],
             color: "emerald",
             image: grouptours,
+            slug: "contact",
         },
         {
             icon: <FaHeart className="text-3xl" />,
@@ -176,6 +192,7 @@ const ServiceSection = () => {
             features: ["Private stays", "Romantic activities", "Fully customized"],
             color: "rose",
             image: honeymoonpackages,
+            slug: "contact",
         },
         {
             icon: <FaCar className="text-3xl" />,
@@ -185,6 +202,7 @@ const ServiceSection = () => {
             features: ["Economy to luxury", "Self-drive or chauffeur", "Flexible plans"],
             color: "fuchsia",
             image: carrentals,
+            slug: "contact",
         },
         {
             icon: <FaClipboardList className="text-3xl" />,
@@ -194,6 +212,7 @@ const ServiceSection = () => {
             features: ["Expert advice", "Best time & budget tips", "Local insights"],
             color: "violet",
             image: travelconsultation,
+            slug: "contact",
         },
         {
             icon: <FaStar className="text-3xl" />,
@@ -203,6 +222,7 @@ const ServiceSection = () => {
             features: ["Premium bookings", "Personal concierge", "Custom luxury tours"],
             color: "yellow",
             image: vipluxurytravel,
+            slug: "contact",
         },
         {
             icon: <FaBriefcase className="text-3xl" />,
@@ -212,6 +232,7 @@ const ServiceSection = () => {
             features: ["Corporate rates", "Dedicated manager", "Flexible changes"],
             color: "indigo",
             image: corporatetravelsolutions,
+            slug: "contact",
         },
         {
             icon: <FaTicketAlt className="text-3xl" />,
@@ -221,6 +242,7 @@ const ServiceSection = () => {
             features: ["Concerts & sports trips", "Cultural events", "Hassle-free bookings"],
             color: "cyan",
             image: eventfestivalpackages,
+            slug: "contact",
         },
         {
             icon: <FaFileSignature className="text-3xl" />,
@@ -230,6 +252,7 @@ const ServiceSection = () => {
             features: ["Embassy attestation", "Quick turnaround", "Secure handling"],
             color: "gray",
             image: documentattestation,
+            slug: "contact",
         },
         {
             icon: <FaGraduationCap className="text-3xl" />,
@@ -239,6 +262,7 @@ const ServiceSection = () => {
             features: ["Country-specific advice", "Paperwork checks", "Reliable processing"],
             color: "emerald",
             image: workstudyvisas,
+            slug: "about",
         },
     ];
 
@@ -258,7 +282,8 @@ const ServiceSection = () => {
                             description={feature.description}
                             features={feature.features}
                             color={feature.color}
-                            image={feature.image} // <-- pass image URL here
+                            background={feature.image}
+                            slug={feature.slug}
                         />
                     ))}
                 </div>
@@ -266,21 +291,21 @@ const ServiceSection = () => {
 
             {/* Custom scrollbar styles */}
             <style jsx>{`
-                .feature-scrollbar::-webkit-scrollbar {
-                  width: 4px;
-                }
-                .feature-scrollbar::-webkit-scrollbar-track {
-                  background: #f1f1f1;
-                  border-radius: 4px;
-                }
-                .feature-scrollbar::-webkit-scrollbar-thumb {
-                  background: #c5c5c5;
-                  border-radius: 4px;
-                }
-                .feature-scrollbar::-webkit-scrollbar-thumb:hover {
-                  background: #a8a8a8;
-                }
-            `}</style>
+        .feature-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-thumb {
+          background: #c5c5c5;
+          border-radius: 4px;
+        }
+        .feature-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #a8a8a8;
+        }
+      `}</style>
         </section>
     );
 };
@@ -290,9 +315,15 @@ const FeatureFlipCard = ({
     title = "Travel Solution",
     subtitle = "Explore the benefits",
     description = "Experience premium travel management services.",
-    features = ["Fast booking", "Global options", "Enterprise tools", "Best prices"],
+    features = [
+        "Fast booking",
+        "Global options",
+        "Enterprise tools",
+        "Best prices",
+    ],
     color = "blue",
-    image, // receive image URL
+    background = "bg-gradient-to-br from-blue-500 to-blue-700",
+    slug, 
 }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
@@ -322,66 +353,6 @@ const FeatureFlipCard = ({
             text: "text-violet-600",
             icon: "text-violet-500",
         },
-        green: {
-            gradient: "from-green-500/20 to-green-500/10",
-            text: "text-green-600",
-            icon: "text-green-500",
-        },
-        orange: {
-            gradient: "from-orange-500/20 to-orange-500/10",
-            text: "text-orange-600",
-            icon: "text-orange-500",
-        },
-        purple: {
-            gradient: "from-purple-500/20 to-purple-500/10",
-            text: "text-purple-600",
-            icon: "text-purple-500",
-        },
-        red: {
-            gradient: "from-red-500/20 to-red-500/10",
-            text: "text-red-600",
-            icon: "text-red-500",
-        },
-        yellow: {
-            gradient: "from-yellow-500/20 to-yellow-500/10",
-            text: "text-yellow-600",
-            icon: "text-yellow-500",
-        },
-        teal: {
-            gradient: "from-teal-500/20 to-teal-500/10",
-            text: "text-teal-600",
-            icon: "text-teal-500",
-        },
-        pink: {
-            gradient: "from-pink-500/20 to-pink-500/10",
-            text: "text-pink-600",
-            icon: "text-pink-500",
-        },
-        indigo: {
-            gradient: "from-indigo-500/20 to-indigo-500/10",
-            text: "text-indigo-600",
-            icon: "text-indigo-500",
-        },
-        cyan: {
-            gradient: "from-cyan-500/20 to-cyan-500/10",
-            text: "text-cyan-600",
-            icon: "text-cyan-500",
-        },
-        gray: {
-            gradient: "from-gray-500/20 to-gray-500/10",
-            text: "text-gray-600",
-            icon: "text-gray-500",
-        },
-        lime: {
-            gradient: "from-lime-500/20 to-lime-500/10",
-            text: "text-lime-600",
-            icon: "text-lime-500",
-        },
-        fuchsia: {
-            gradient: "from-fuchsia-500/20 to-fuchsia-500/10",
-            text: "text-fuchsia-600",
-            icon: "text-fuchsia-500",
-        },
     };
 
     const colors = colorMap[color] || colorMap.blue;
@@ -397,15 +368,18 @@ const FeatureFlipCard = ({
                     "relative w-full h-full",
                     "[transform-style:preserve-3d]",
                     "transition-all duration-700",
-                    isFlipped ? "[transform:rotateY(180deg)]" : "[transform:rotateY(0deg)]"
+                    isFlipped
+                        ? "[transform:rotateY(180deg)]"
+                        : "[transform:rotateY(0deg)]"
                 )}
             >
-                {/* Front of card with background image via inline style */}
+                {/* Front of card with background image */}
                 <div
                     className={cn(
                         "absolute inset-0 w-full h-full",
                         "[backface-visibility:hidden] [transform:rotateY(0deg)]",
                         "overflow-hidden rounded-2xl",
+                        "bg-cover bg-center",
                         "border border-slate-200/30",
                         "shadow-lg",
                         "transition-all duration-700",
@@ -413,11 +387,12 @@ const FeatureFlipCard = ({
                         isFlipped ? "opacity-0" : "opacity-100"
                     )}
                     style={{
-                        backgroundImage: `url(${image})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
+                        backgroundImage: `url(${background})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
                     }}
                 >
+
                     <div className="relative h-full overflow-hidden p-6 flex flex-col bg-black/10">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div
@@ -429,66 +404,111 @@ const FeatureFlipCard = ({
 
                         {/* Title and subtitle at bottom */}
                         <div className="mt-auto text-center">
-                            <h3 className="text-xl font-bold text-white leading-tight">{title}</h3>
+                            <h3 className="text-xl font-bold text-white leading-tight">
+                                {title}
+                            </h3>
                             <p className="text-white/90 mt-2 text-sm">{subtitle}</p>
                         </div>
                     </div>
                 </div>
 
-                {/* Back of card */}
+                {/* Back of card - adjusted layout */}
                 <div
                     className={cn(
                         "absolute inset-0 w-full h-full",
                         "[backface-visibility:hidden] [transform:rotateY(180deg)]",
-                        "overflow-hidden rounded-2xl",
-                        "border border-slate-200/30",
-                        "bg-white shadow-lg",
+                        "p-4 rounded-2xl",
+                        "bg-gradient-to-b from-slate-50 to-white",
+                        "border border-slate-200",
+                        "shadow-lg",
+                        "flex flex-col",
                         "transition-all duration-700",
-                        isFlipped ? "opacity-100" : "opacity-0"
+                        "group-hover:shadow-xl",
+                        !isFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
-                    <div className="flex flex-col h-full p-6 overflow-y-auto feature-scrollbar">
-                        <h3 className={`${colors.text} text-xl font-semibold mb-2`}>{title}</h3>
-                        <p className="text-gray-600 mb-4 text-sm">{description}</p>
-                        <ul className="flex-1 space-y-2 text-gray-700 text-sm list-disc list-inside">
-                            {features.map((feature, i) => (
-                                <li key={i}>{feature}</li>
-                            ))}
-                        </ul>
-                        <button
-                            type="button"
+                    <div className="flex-1 overflow-hidden flex flex-col">
+                        <div className="mb-3">
+                            <h3 className="text-base font-bold text-slate-900 text-center leading-tight">
+                                {title}
+                            </h3>
+                            <p className="text-xs text-slate-600 text-center mt-1">
+                                {description}
+                            </p>
+                        </div>
+
+                        {/* Feature list with scroll */}
+                        <div className="flex-1 min-h-0 overflow-y-auto feature-scrollbar pr-1">
+                            <div className="space-y-2">
+                                {features.map((feature, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-start gap-2 text-xs text-slate-700 transition-all duration-500"
+                                        style={{
+                                            transform: isFlipped
+                                                ? "translateX(0)"
+                                                : "translateX(-10px)",
+                                            opacity: isFlipped ? 1 : 0,
+                                            transitionDelay: `${index * 100 + 200}ms`,
+                                        }}
+                                    >
+                                        <div
+                                            className={`min-w-[16px] h-4 rounded-full ${colors.icon} flex items-center justify-center mt-0.5`}
+                                        >
+                                            <div className="w-1.5 h-1.5 rounded-full bg-current"></div>
+                                        </div>
+                                        <span className="leading-tight">{feature}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="pt-2 mt-auto">
+                        <Link
+                            to={`/${slug}`}
                             className={cn(
-                                "mt-6 rounded-md px-3 py-2 text-sm font-semibold transition-colors",
-                                `bg-${color}-600 text-white hover:bg-${color}-700`
+                                "group/start relative",
+                                "flex items-center justify-between",
+                                "p-3 -m-3 rounded-xl",
+                                "transition-all duration-300",
+                                "bg-gradient-to-r from-slate-100 to-slate-50",
+                                "hover:from-blue-500/10 hover:via-blue-500/5 hover:to-transparent",
+                                "hover:scale-[1.02] hover:cursor-pointer"
                             )}
+                            type="button"
                         >
-                            Learn More
-                        </button>
+                            <span
+                                className={`text-xs font-medium ${colors.text} transition-colors duration-300 group-hover/start:text-blue-600`}
+                            >
+                                Learn more
+                            </span>
+                            <div className="relative group/icon">
+                                <div
+                                    className={cn(
+                                        "absolute inset-[-6px] rounded-lg transition-all duration-300",
+                                        `bg-gradient-to-br ${colors.gradient}`,
+                                        "opacity-0 group-hover/start:opacity-100 scale-90 group-hover/start:scale-100"
+                                    )}
+                                />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className={`relative z-10 w-3.5 h-3.5 ${colors.icon} transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110`}
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clipRule="evenodd"
+                                    />
+                                </svg>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
-    );
-};
-
-// StatCard component for animated statistics
-const StatCard = ({ icon, number, label, delay = 0 }) => {
-    return (
-        <motion.div
-            className="flex flex-col items-center p-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay, duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-        >
-            <div className="mb-4 p-3 rounded-full bg-white/20 backdrop-blur-sm">
-                {icon}
-            </div>
-            <div className="text-3xl font-bold mb-2">
-                {number}
-            </div>
-            <div className="text-sm opacity-90 text-center">{label}</div>
-        </motion.div>
     );
 };
 

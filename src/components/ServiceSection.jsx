@@ -149,7 +149,7 @@ const ServiceSection = () => {
             features: ["Paperwork help", "Embassy updates", "Smooth approvals"],
             color: "cyan",
             image: schengenvisa,
-            slug: "contact",
+            slug: "schengen-visa",
         },
         {
             icon: <FaKaaba className="text-3xl" />,

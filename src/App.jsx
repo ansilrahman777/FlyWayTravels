@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import BookingModal from './components/BookingModal';
+import SchengenVisa from './pages/SchengenVisa';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services openBookingModal={openBookingModal} />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/schengen-visa" element={<SchengenVisa />} />
             </Routes>
           </AnimatePresence>
         </main>

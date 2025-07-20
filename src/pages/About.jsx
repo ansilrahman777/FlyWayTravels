@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ceoImg from "../assets/images/ceo.png";
+import chairmanImg from "../assets/images/chairman.png";
 import teamImg from "../assets/images/team1.png";
 import officeImg from "../assets/images/office1.png";
 const About = () => {
@@ -100,14 +101,14 @@ const About = () => {
               <h2 className="text-3xl font-bold text-blwhiteack sm:text-4xl lg:text-5xl mb-6">
                 Our Mission & Vision
               </h2>
-              <p className="text-lg text-white font-amita font-semibold leading-relaxed text-justify">
+              <p className="text-lg text-white font-synemono font-semibold leading-relaxed text-justify">
                 At Flyway Travel, our mission is simple — to make global travel
                 effortless, accessible, and memorable for every explorer. Our
                 vision is to be the trusted partner people choose when they want
                 expert visa support, the best flights, comfortable stays, and
                 reliable transfers — all handled with genuine care.
               </p>
-              <p className="mt-6 text-lg font-amita font-semibold text-white text-justify">
+              <p className="mt-6 text-lg font-synemono font-semibold text-white text-justify">
                 We believe every journey should be stress-free, every traveler
                 should feel confident, and every experience should create
                 stories worth telling
@@ -133,16 +134,16 @@ const About = () => {
                 Message from Founder
               </h2>
               <blockquote>
-                <p class="text-lg font-semibold font-amita leading-relaxed text-white text-justify">
+                <p class="text-lg font-semibold font-synemono leading-relaxed text-white text-justify">
                   “Travel changes lives — it opens minds, builds memories, and
                   connects people in ways nothing else can. As someone who has
                   explored over 30+ countries, I know first-hand how special
                   each journey can be. At Flyway Travel, my promise is simple:
-                  we’ll treat your trip like our own — with care, clarity, and
+                  we'll treat your trip like our own — with care, clarity, and
                   passion that only true travelers understand.”
                 </p>
               </blockquote>
-              <div class="mt-6 sm:flex sm:items-baseline font-amita sm:justify-center md:justify-start">
+              <div class="mt-6 sm:flex font-synemono sm:items-baseline sm:justify-center md:justify-start">
                 <p class="text-base font-semibold text-white">Mohmmed Jabir</p>
                 <p class="mt-2 text-base text-white sm:mt-0 sm:ml-2">
                   Founder & CEO
@@ -154,9 +155,40 @@ const About = () => {
       </section>
 
       <section className="py-16 ">
+        <div class="px-4 mx-auto bg-slate-500/50 rounded-lg py-10 max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-16 items-center">
+            <div className="order-1 justify-items-center ">
+              <img
+                className="w-[310px] rounded-full"
+                src={chairmanImg}
+                alt="Our Chairman"
+              />
+            </div>
+
+            <div className="text-center md:text-left order-2">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
+                Message from Chairman
+              </h2>
+              <blockquote>
+                <p class="text-lg font-semibold font-synemono leading-relaxed text-white text-justify">
+                  “At Flyway Travel, we believe that travel is more than just movement — it's an experience that connects cultures and creates lifelong memories. As Chairman, I am proud to lead a team that goes the extra mile to make every journey smooth, safe, and unforgettable. We promise to keep raising the bar in service, trust, and care for our travelers.”
+                </p>
+              </blockquote>
+              <div class="mt-6 sm:flex font-synemono sm:items-baseline sm:justify-center md:justify-start">
+                <p class="text-base font-semibold text-white">(name)</p>
+                <p class="mt-2 text-base text-white sm:mt-0 sm:ml-2">
+                  Chairman
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 ">
         <div class="px-4  mx-auto bg-slate-500/50 rounded-lg py-10  max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-16 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2">
               <img
                 className="w-full rounded-xl shadow-lg"
                 src={teamImg}
@@ -164,11 +196,11 @@ const About = () => {
               />
             </div>
 
-            <div className="text-center md:text-left order-1 md:order-2">
+            <div className="text-center md:text-left order-1">
               <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
                 Meet Our Dedicated Team
               </h2>
-              <p className="text-lg font-amita text-white font-semibold leading-relaxed">
+              <p className="text-lg font-synemono text-white font-semibold leading-relaxed">
                 At Flyway Travel, our greatest strength is our people. From
                 seasoned travel planners and visa experts to our friendly
                 support crew, every team member is driven by one goal: to make
@@ -176,7 +208,7 @@ const About = () => {
                 detail, solve every hiccup, and stay by your side — so you can
                 travel with complete peace of mind.
               </p>
-              <p className="mt-6 font-amita text-base font-semibold text-white">
+              <p className="mt-6 font-synemono text-base font-semibold text-white">
                 Together, we go further.
               </p>
             </div>

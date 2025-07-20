@@ -22,15 +22,15 @@ const Services = ({ openBookingModal }) => {
             </div>
 
             <div class="relative font-emilys px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left">
-              <h1 class="text-4xl font-bold text-black sm:text-6xl xl:text-7xl">
+              <h1 class="text-4xl font-bold text-white sm:text-6xl xl:text-7xl">
                 Your Journey, Our Services
               </h1>
-              <p class="mt-6 text-lg font-bold text-black sm:text-xl">
+              <p class="mt-6 text-lg font-bold text-white sm:text-xl">
                 Flyway Travel delivers complete solutions — from expert visa
                 assistance to best flight deals, hotel bookings, and 24/7
                 support.
               </p>
-              <p class="mt-4 text-base text-black font-bold max-w-xl">
+              <p class="mt-4 text-base text-white font-bold max-w-xl">
                 Explore our range of travel services designed to make every part
                 of your trip simple, safe, and special.
               </p>
@@ -85,10 +85,10 @@ const Services = ({ openBookingModal }) => {
 
       <section className="mt-24">
         <div className="max-w-3xl mb-10 lg:mb-14 mx-auto text-center">
-          <h2 className="text-black font-emilys font-semibold text-2xl md:text-4xl md:leading-tight">
+          <h2 className="text-white font-emilys font-semibold text-2xl md:text-4xl md:leading-tight">
             Our Services
           </h2>
-          <p className="mt-1 font-emilys text-lg text-black">
+          <p className="mt-1 font-emilys text-lg text-white">
             At Flyway Travel, we take the hassle out of planning and bring the
             joy back to travel. Whether you're jetting off for adventure,
             business, family time, or spiritual journeys — we handle the details
@@ -101,10 +101,10 @@ const Services = ({ openBookingModal }) => {
       <section className="py-20">
         <div className="max-w-7xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
           <div className="max-w-3xl mb-10 lg:mb-14 mx-auto text-center">
-            <h2 className="text-black font-emilys font-semibold text-2xl md:text-4xl md:leading-tight">
+            <h2 className="text-white font-emilys font-semibold text-2xl md:text-4xl md:leading-tight">
               Our Approach
             </h2>
-            <p className="mt-1 font-emilys text-lg text-black">
+            <p className="mt-1 font-emilys text-lg text-white">
               Every journey matters. Our approach combines deep expertise, local
               connections, and personalized support — ensuring you travel
               smoothly, safely, and stress-free from start to finish.
@@ -131,14 +131,14 @@ const Services = ({ openBookingModal }) => {
                 <div className="flex gap-x-5">
                   <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:bg-neutral-800">
                     <div className="relative z-10 size-8 flex justify-center items-center">
-                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
+                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-white font-semibold text-xs uppercase rounded-full">
                         1
                       </span>
                     </div>
                   </div>
                   <div className="grow pt-0.5 pb-8">
-                    <p className="text-base font-emilys lg:text-base text-black">
-                      <span className="text-black">
+                    <p className="text-base font-emilys lg:text-base text-white">
+                      <span className="text-white">
                         Personalized Consultation:
                       </span>
                       We listen to your travel needs and craft a plan that suits
@@ -150,14 +150,14 @@ const Services = ({ openBookingModal }) => {
                 <div className="flex gap-x-5">
                   <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:bg-neutral-800">
                     <div className="relative z-10 size-8 flex justify-center items-center">
-                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
+                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-white font-semibold text-xs uppercase rounded-full">
                         2
                       </span>
                     </div>
                   </div>
                   <div className="grow pt-0.5 pb-8">
-                    <p className="text-base font-emilys lg:text-base text-black">
-                      <span className="text-black">Visa & Documents:</span>
+                    <p className="text-base font-emilys lg:text-base text-white">
+                      <span className="text-white">Visa & Documents:</span>
                       We handle all paperwork, visa applications, and travel
                       documents so you don’t have to stress.
                     </p>
@@ -167,14 +167,14 @@ const Services = ({ openBookingModal }) => {
                 <div className="flex gap-x-5">
                   <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:bg-neutral-800">
                     <div className="relative z-10 size-8 flex justify-center items-center">
-                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
+                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-white font-semibold text-xs uppercase rounded-full">
                         3
                       </span>
                     </div>
                   </div>
                   <div className="grow pt-0.5 pb-8">
-                    <p className="text-base font-emilys lg:text-base text-black">
-                      <span className="text-black">Flights & Stays:</span>
+                    <p className="text-base font-emilys lg:text-base text-white">
+                      <span className="text-white">Flights & Stays:</span>
                       Get the best flight deals, secure hotel bookings, and
                       tailored recommendations for your comfort.
                     </p>
@@ -184,14 +184,14 @@ const Services = ({ openBookingModal }) => {
                 <div className="flex gap-x-5">
                   <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:bg-neutral-800">
                     <div className="relative z-10 size-8 flex justify-center items-center">
-                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
+                      <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-white font-semibold text-xs uppercase rounded-full">
                         4
                       </span>
                     </div>
                   </div>
                   <div className="grow pt-0.5 pb-8">
-                    <p className="text-base font-emilys lg:text-base text-black">
-                      <span className="text-black">Travel Support:</span>
+                    <p className="text-base font-emilys lg:text-base text-white">
+                      <span className="text-white">Travel Support:</span>
                       Relax while we manage transfers, itinerary updates, and
                       24/7 support during your trip.
                     </p>

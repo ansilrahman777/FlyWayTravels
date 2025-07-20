@@ -125,7 +125,7 @@ const HeroSection03 = () => {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-[5rem] md:text-[8rem] lg:text-[8rem] font-script tracking-wide leading-none text-black select-none"
+              className="text-[5rem] md:text-[8rem] lg:text-[8rem] font-script tracking-wide leading-none text-white select-none"
             />
             {/* <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-white bg-linear-to-b from-blue-800 to-blue-600 dark:from-sky-300 dark:to-blue-400">

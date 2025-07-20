@@ -9,9 +9,9 @@ import { BiPhone } from "react-icons/bi";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp, FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaRegCommentDots } from "react-icons/fa";
 import { LuSendHorizontal } from "react-icons/lu";
 
-const SERVICE_ID = "service_79t66tr";
-const TEMPLATE_ID = "template_m4pi72m";
-const USER_ID = "9vUgntlYQLJrRPGoy";
+const SERVICE_ID = "service_hxmeltg";
+const TEMPLATE_ID = "ctemplate_4cuysme";
+const USER_ID = "fOcu1jHpv6dTSjiad";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,9 +59,9 @@ const Contact = () => {
 
   return (
     <main className="text-white" style={{
-      backgroundImage: "linear-gradient(135deg, #db1212 5%, #7a43bf 38%, #3dd7d7 69%, #b1c709 95%)",
+      backgroundImage: "linear-gradient(135deg, #db1212 5%, #7a43bf 38%, #3dd7d7 69%, #b1c704 95%)",
     }}>
-       <section class="overflow-hidden">
+      <section class="overflow-hidden">
         <div class="flex flex-col font-emilys lg:flex-row lg:items-stretch lg:min-h-[600px]">
           <div class="relative flex items-center justify-center w-full lg:order-1 lg:w-7/12">
             <div class="absolute bottom-0 right-0 hidden lg:block">
@@ -73,14 +73,14 @@ const Contact = () => {
             </div>
 
             <div class="relative px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left">
-              <h1 class="text-4xl font-bold text-black sm:text-6xl xl:text-7xl">
+              <h1 class="text-4xl font-bold text-white sm:text-6xl xl:text-7xl">
                 Let’s Start Your Journey Together
               </h1>
-              <p class="mt-6 text-lg font-bold text-black sm:text-xl">
+              <p class="mt-6 text-lg font-bold text-white sm:text-xl">
                 Have a question? Need help with a visa, flight, or hotel? We're
                 ready to make it happen.
               </p>
-              <p class="mt-4 text-base text-black font-bold max-w-xl">
+              <p class="mt-4 text-base text-white font-bold max-w-xl">
                 Call, message, or visit us — our travel experts are here to plan
                 every detail of your next adventure.
               </p>
@@ -119,7 +119,7 @@ const Contact = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                  <h2 class="ml-3 text-4xl font-bold text-white">3,500+</h2>
+                  <h2 class="ml-3 text-4xl font-bold text-white">10000+</h2>
                 </div>
                 <p class="max-w-xs mt-1.5 text-base text-white">
                   Happy travelers trust Flyway every year for honest advice,
@@ -131,85 +131,82 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-fixed bg-cover bg-center min-h-screen">
-        <div className="mx-auto w-full max-w-7xl px-5 py-5 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-20 items-start">
-            {/* Contact Info */}
+      <section className="overflow-hidden bg-fixed bg-cover bg-center">
+        <div className="mx-auto w-full max-w-7xl px-5 py-20 md:px-10 md:py-20">
+          <div className="grid grid-cols-1  md:grid-cols-5 gap-8 sm:gap-20 items-start">
             <div className="md:col-span-2">
-              <h2 className="font-bold text-white">Contact us</h2>
-              <h1 className="mb-3 pb-4 text-3xl font-bold text-white md:text-5xl">
-                Have questions?
-                <br />
-                Get in touch!
+              <h2 className="font-bold text-white">Contact Us</h2>
+              <h1 className="mb-3 pb-4 text-3xl font-bold font-emilys text-white md:text-5xl">
+                Planning Your Next Trip?<br />
+                Let’s Talk Travel!
               </h1>
-              <p className="mb-3 text-white font-normal text-justify">
-                Have a question or need to book a service? We're here to help!
+              <p className="mb-3 font-emilys text-white font-normal text-justify">
+                Whether you're booking a flight, planning a holiday, or need help with visa services — our travel experts are ready to assist you. Reach out and let's make your journey hassle-free.
               </p>
-              <div className="space-y-2 font-normal text-lg text-white">
+
+              <div className="space-y-2 font-mono font-normal text-lg text-white">
                 <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-white" />
-                  <span>carnationauh@gmail.com</span>
+                  <FaEnvelope className="text-white " />
+                  <span>info@flywaytravel.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FaPhone className="text-white" />
-                  <span>+971 2517 5703 | +971 52 252 0955</span>
+                  <span>02 641 4434</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FaMapMarkerAlt className="text-white" />
-                  <span>Building No: 205, Musaffah - M11, Abu Dhabi</span>
+                  <span>Al Nahyan - E25 - Abu Dhabi</span>
                 </div>
               </div>
 
               <div className="mt-10 flex space-x-6">
-                <a href="https://wa.link/sikj7y" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
-                <a href="https://www.instagram.com/carnationautogarage?igsh=..." className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
-                <a href="https://youtube.com/@cnagcarnationautogarage" className="text-white hover:text-red-700"><FaYoutube size={24} /></a>
-                <a href="https://www.tiktok.com/@user1243615341681" className="text-white hover:text-red-700"><FaTiktok size={24} /></a>
-                <a href="https://www.facebook.com/p/Car-Nation-Auto-Garage-..." className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
+                <a href="https://wa.me/971509845162" className="text-white hover:text-red-700"><FaWhatsapp size={24} /></a>
+                <a href="https://www.instagram.com/flywaytravel_auh" className="text-white hover:text-red-700"><FaInstagram size={24} /></a>
+                {/* <a href="" className="text-white hover:text-red-700"><FaYoutube size={24} /></a> */}
+                {/* <a href="" className="text-white hover:text-red-700"><FaTiktok size={24} /></a> */}
+                <a href="https://www.facebook.com/flywaytravelauh" className="text-white hover:text-red-700"><FaFacebook size={24} /></a>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="md:col-span-3">
+            <div className="md:col-span-3 font-emilys">
               <form onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-8">
                   <div className="relative flex items-center w-full">
                     <AiOutlineUser className="absolute left-2 text-white" size={20} />
                     <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required
-                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white  placeholder-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
                   </div>
 
                   <div className="relative flex items-center">
                     <MdSubject className="absolute left-2 text-white" size={20} />
                     <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange}
-                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white  placeholder-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
                   </div>
 
                   <div className="relative flex items-center">
                     <BiPhone className="absolute left-2 text-white" size={20} />
                     <input type="text" name="phone" placeholder="Phone No." value={formData.phone} onChange={handleChange}
-                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white  placeholder-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
                   </div>
 
                   <div className="relative flex items-center">
                     <AiOutlineMail className="absolute left-2 text-white" size={20} />
                     <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required
-                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white  placeholder-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" />
                   </div>
 
                   <div className="relative flex items-center sm:col-span-2">
                     <FaRegCommentDots className="absolute left-2 top-4 text-white" size={20} />
                     <textarea name="message" placeholder="How can we help you?" rows="5" value={formData.message} onChange={handleChange}
-                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" required />
+                      className="pl-8 pr-2 py-3 bg-transparent w-full text-lg text-white  placeholder-white border-b border-white focus:border-red-700 hover:border-red-700 outline-none transition-all duration-500" required />
                   </div>
                 </div>
 
                 <button type="submit" disabled={submitting}
-                  className={`relative mt-12 lg:ml-auto max-lg:w-full rounded-lg inline-flex items-center px-9 py-3 overflow-hidden text-base font-medium border ${
-                    submitting
-                      ? "bg-gray-300 text-black cursor-not-allowed"
-                      : "text-white border-white hover:text-black hover:bg-white"
-                  }`}>
+                  className={`relative mt-12 lg:ml-auto max-lg:w-full rounded-lg inline-flex items-center px-9 py-3 overflow-hidden text-base font-medium border ${submitting
+                    ? "bg-gray-300 text-black cursor-not-allowed"
+                    : "text-white border-white hover:text-black hover:bg-white"
+                    }`}>
                   <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
                     <LuSendHorizontal className="ml-2" size={18} />
                   </span>
@@ -231,9 +228,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Map */}
-      <div style={{ overflow: "hidden" }}>
-      <div className="relative w-full h-96">
+      <div className="relative w-full h-[600px] overflow-hidden">
         <iframe
           className="absolute top-0 left-0 w-full h-full"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.523346885761!2d54.38211257449502!3d24.467317360878045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6737a02e677b%3A0xc65731d635c5380b!2sFLY%20WAY%20TRAVEL!5e0!3m2!1sen!2sae!4v1752847625938!5m2!1sen!2sae"
@@ -241,16 +236,18 @@ const Contact = () => {
           aria-hidden="false"
           tabIndex="10"
         ></iframe>
-      </div>
+
+        {/* SVG overlapping bottom */}
         <svg
+          className="absolute bottom-0 left-0 w-full pointer-events-none"
           preserveAspectRatio="none"
           viewBox="0 0 1200 120"
           xmlns="http://www.w3.org/2000/svg"
           style={{
             fill: "#77ffc2",
-            width: "100%",
             height: 165,
             transform: "rotate(180deg)",
+            zIndex: 10,
           }}
         >
           <path
@@ -264,6 +261,8 @@ const Contact = () => {
           <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
         </svg>
       </div>
+
+
     </main>
   );
 };

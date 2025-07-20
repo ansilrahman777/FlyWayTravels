@@ -2,11 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  FaRocket,
-  FaPlane,
-  FaHotel,
-  FaCar,
-  FaUserFriends,
   FaPassport,
   FaTicketAlt,
   FaWallet,
@@ -17,6 +12,11 @@ import {
   FaStar,
   FaShuttleVan,
 } from "react-icons/fa";
+import visa1 from "../../assets/services/hero/visa1.jpg";
+import airport1 from "../../assets/services/hero/airport1.jpg";
+import guide1 from "../../assets/services/hero/guide1.jpg";
+import service1 from "../../assets/services/hero/service1.jpg";
+import travel1 from "../../assets/services/hero/travel1.jpg";
 import { cn } from "../../lib/utils";
 
 const HeroSection08 = () => {
@@ -34,8 +34,7 @@ const HeroSection08 = () => {
         "Stress-free process",
       ],
       color: "blue",
-      background:
-        "bg-[url('https://images.unsplash.com/photo-1506970845240-76861bd7dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]",
+      background: `url(${visa1})`,
     },
     {
       icon: <FaTicketAlt className="text-3xl" />,
@@ -43,15 +42,9 @@ const HeroSection08 = () => {
       subtitle: "Best flights at the best prices",
       description:
         "We find the best flights at competitive prices. From economy to business class, our ticketing ensures smooth bookings, flexible options, and support for changing plans.",
-      features: [
-        "Best prices",
-        "Flexible options",
-        "Full support",
-        "Smooth booking",
-      ],
+      features: ["Best prices", "Flexible options", "Full support", "Smooth booking"],
       color: "emerald",
-      background:
-        "bg-[url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80')]",
+      background: `url(${service1})`,
     },
     {
       icon: <FaWallet className="text-3xl" />,
@@ -66,8 +59,7 @@ const HeroSection08 = () => {
         "Curated experiences",
       ],
       color: "amber",
-      background:
-        "bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]",
+      background: `url(${travel1})`,
     },
     {
       icon: <FaMapMarkedAlt className="text-3xl" />,
@@ -82,8 +74,7 @@ const HeroSection08 = () => {
         "24/7 support",
       ],
       color: "rose",
-      background:
-        "bg-[url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]",
+      background: `url(${guide1})`,
     },
     {
       icon: <FaShuttleVan className="text-3xl" />,
@@ -98,8 +89,7 @@ const HeroSection08 = () => {
         "24/7 availability",
       ],
       color: "violet",
-      background:
-        "bg-[url('https://images.unsplash.com/photo-1500835556837-99ac94a05952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]",
+      background: `url(${airport1})`,
     },
   ];
 
@@ -133,24 +123,14 @@ const HeroSection08 = () => {
           </motion.p>
         </div>
 
-
-        {/* Features grid with flip cards */}
+        {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 py-10 justify-center">
           {features.map((feature, index) => (
-            <FeatureFlipCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              subtitle={feature.subtitle}
-              description={feature.description}
-              features={feature.features}
-              color={feature.color}
-              background={feature.background}
-            />
+            <FeatureFlipCard key={index} {...feature} />
           ))}
         </div>
 
-        {/* Statistics Section */}
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -191,7 +171,7 @@ const HeroSection08 = () => {
         </motion.div>
       </div>
 
-      {/* Custom scrollbar styles */}
+      {/* Scrollbar styling */}
       <style jsx>{`
         .feature-scrollbar::-webkit-scrollbar {
           width: 4px;
@@ -212,52 +192,26 @@ const HeroSection08 = () => {
   );
 };
 
-// Feature Flip Card Component
 const FeatureFlipCard = ({
   icon,
-  title = "Travel Solution",
-  subtitle = "Explore the benefits",
-  description = "Experience premium travel management services.",
-  features = [
-    "Fast booking",
-    "Global options",
-    "Enterprise tools",
-    "Best prices",
-  ],
-  color = "blue",
-  background = "bg-gradient-to-br from-blue-500 to-blue-700",
+  title,
+  subtitle,
+  description,
+  features,
+  color,
+  background,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Color mapping
-  const colorMap = {
-    blue: {
-      gradient: "from-blue-500/20 to-blue-500/10",
-      text: "text-blue-600",
-      icon: "text-blue-500",
-    },
-    emerald: {
-      gradient: "from-emerald-500/20 to-emerald-500/10",
-      text: "text-emerald-600",
-      icon: "text-emerald-500",
-    },
-    amber: {
-      gradient: "from-amber-500/20 to-amber-500/10",
-      text: "text-amber-600",
-      icon: "text-amber-500",
-    },
-    rose: {
-      gradient: "from-rose-500/20 to-rose-500/10",
-      text: "text-rose-600",
-      icon: "text-rose-500",
-    },
-    violet: {
-      gradient: "from-violet-500/20 to-violet-500/10",
-      text: "text-violet-600",
-      icon: "text-violet-500",
-    },
-  };
+  const useInlineStyle = background.startsWith("url(");
 
+  const colorMap = {
+    blue: { gradient: "from-blue-500/20 to-blue-500/10", text: "text-blue-600", icon: "text-blue-500" },
+    emerald: { gradient: "from-emerald-500/20 to-emerald-500/10", text: "text-emerald-600", icon: "text-emerald-500" },
+    amber: { gradient: "from-amber-500/20 to-amber-500/10", text: "text-amber-600", icon: "text-amber-500" },
+    rose: { gradient: "from-rose-500/20 to-rose-500/10", text: "text-rose-600", icon: "text-rose-500" },
+    violet: { gradient: "from-violet-500/20 to-violet-500/10", text: "text-violet-600", icon: "text-violet-500" },
+  };
   const colors = colorMap[color] || colorMap.blue;
 
   return (
@@ -271,46 +225,39 @@ const FeatureFlipCard = ({
           "relative w-full h-full",
           "[transform-style:preserve-3d]",
           "transition-all duration-700",
-          isFlipped
-            ? "[transform:rotateY(180deg)]"
-            : "[transform:rotateY(0deg)]"
+          isFlipped ? "[transform:rotateY(180deg)]" : "[transform:rotateY(0deg)]"
         )}
       >
-        {/* Front of card with background image */}
+        {/* Front */}
         <div
           className={cn(
             "absolute inset-0 w-full h-full",
             "[backface-visibility:hidden] [transform:rotateY(0deg)]",
             "overflow-hidden rounded-2xl",
-            background,
             "bg-cover bg-center",
             "border border-slate-200/30",
             "shadow-lg",
             "transition-all duration-700",
             "group-hover:shadow-xl",
-            isFlipped ? "opacity-0" : "opacity-100"
+            isFlipped ? "opacity-0" : "opacity-100",
+            !useInlineStyle && background
           )}
+          style={useInlineStyle ? { backgroundImage: background } : {}}
         >
           <div className="relative h-full overflow-hidden p-6 flex flex-col bg-black/10">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className={`w-16 h-16 rounded-full ${colors.icon} flex items-center justify-center bg-white/50`}
-              >
+              <div className={`w-16 h-16 rounded-full ${colors.icon} flex items-center justify-center bg-white/50`}>
                 {React.cloneElement(icon, { className: "text-3xl" })}
               </div>
             </div>
-
-            {/* Title and subtitle at bottom */}
             <div className="mt-auto text-center">
-              <h3 className="text-xl font-bold font-emilys text-white leading-tight">
-                {title}
-              </h3>
+              <h3 className="text-xl font-bold font-emilys text-white leading-tight">{title}</h3>
               <p className="text-white/90 mt-2 text-sm font-emilys">{subtitle}</p>
             </div>
           </div>
         </div>
 
-        {/* Back of card - adjusted layout */}
+        {/* Back */}
         <div
           className={cn(
             "absolute inset-0 w-full h-full",
@@ -318,8 +265,7 @@ const FeatureFlipCard = ({
             "p-4 rounded-2xl",
             "bg-gradient-to-b from-slate-50 to-white",
             "border border-slate-200",
-            "shadow-lg",
-            "flex flex-col",
+            "shadow-lg flex flex-col",
             "transition-all duration-700",
             "group-hover:shadow-xl",
             !isFlipped ? "opacity-0" : "opacity-100"
@@ -327,15 +273,9 @@ const FeatureFlipCard = ({
         >
           <div className="flex-1 overflow-hidden flex flex-col">
             <div className="mb-3">
-              <h3 className="text-base font-emilys font-bold text-slate-900 text-center leading-tight">
-                {title}
-              </h3>
-              <p className="text-xs font-emilys text-slate-600 text-center mt-1">
-                {description}
-              </p>
+              <h3 className="text-base font-emilys font-bold text-slate-900 text-center leading-tight">{title}</h3>
+              <p className="text-xs font-emilys text-slate-600 text-center mt-1">{description}</p>
             </div>
-
-            {/* Feature list with scroll */}
             <div className="flex-1 min-h-0 overflow-y-auto feature-scrollbar pr-1">
               <div className="space-y-2">
                 {features.map((feature, index) => (
@@ -343,16 +283,12 @@ const FeatureFlipCard = ({
                     key={index}
                     className="flex items-start gap-2 text-xs text-slate-700 transition-all duration-500"
                     style={{
-                      transform: isFlipped
-                        ? "translateX(0)"
-                        : "translateX(-10px)",
+                      transform: isFlipped ? "translateX(0)" : "translateX(-10px)",
                       opacity: isFlipped ? 1 : 0,
                       transitionDelay: `${index * 100 + 200}ms`,
                     }}
                   >
-                    <div
-                      className={`min-w-[16px] h-4 rounded-full ${colors.icon} flex items-center justify-center mt-0.5`}
-                    >
+                    <div className={`min-w-[16px] h-4 rounded-full ${colors.icon} flex items-center justify-center mt-0.5`}>
                       <div className="w-1.5 h-1.5 rounded-full bg-current"></div>
                     </div>
                     <span className="leading-tight font-emilys">{feature}</span>
@@ -408,23 +344,18 @@ const FeatureFlipCard = ({
   );
 };
 
-// StatCard component for animated statistics
-const StatCard = ({ icon, number, label, delay = 0 }) => {
-  return (
-    <motion.div
-      className="flex flex-col items-center p-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay, duration: 0.5 }}
-      whileHover={{ scale: 1.05 }}
-    >
-      <div className="mb-4 p-3 rounded-full bg-white/20 backdrop-blur-sm">
-        {icon}
-      </div>
-      <div className="text-3xl font-bold mb-2 font-emilys">{number}</div>
-      <div className="text-sm opacity-90 text-center font-emilys">{label}</div>
-    </motion.div>
-  );
-};
+const StatCard = ({ icon, number, label, delay = 0 }) => (
+  <motion.div
+    className="flex flex-col items-center p-4"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay, duration: 0.5 }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <div className="mb-4 p-3 rounded-full bg-white/20 backdrop-blur-sm">{icon}</div>
+    <div className="text-3xl font-bold mb-2 font-emilys">{number}</div>
+    <div className="text-sm opacity-90 text-center font-emilys">{label}</div>
+  </motion.div>
+);
 
 export default HeroSection08;

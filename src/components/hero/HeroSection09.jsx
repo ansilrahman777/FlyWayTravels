@@ -10,7 +10,7 @@ const HeroSection09 = () => {
         <TestimonialCarousel />
       </div>
 
-      <div className="mx-auto max-w-3xl mt-10">
+      <div className="mx-auto max-w-7xl mt-10 md:mt-20">
         <h3 className="mb-6 text-center text-3xl font-semibold text-white font-emilys">
           Frequently Asked Questions
         </h3>

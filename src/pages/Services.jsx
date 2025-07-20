@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import ServiceSection from "../components/ServiceSection";
 import image1 from "../assets/images/fw6.jpg";
 

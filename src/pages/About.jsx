@@ -26,7 +26,7 @@ const About = () => {
 
             <div class="relative px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left">
               <h1 class="text-4xl font-bold text-white sm:text-6xl xl:text-7xl">
-                Discover the World with Flyway Travel
+                Discover the World with Flyway Travels
               </h1>
               <p class="mt-6 text-lg font-bold text-white sm:text-xl">
                 Your trusted partner for stress-free journeys, luxury stays,
